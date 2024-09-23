@@ -1,7 +1,34 @@
 {
-  "name": "vite-react",
+  "name": "scarf-ui-pwa",
+  "description": "SCARF-UI-PWA is a PWA to support research synthesis featuring SCEDs",
+  "homepage": "https://www.smallnstats.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miyamot0/scarf-ui-pwa"
+  },
+  "author": {
+    "name": "Shawn P. Gilroy",
+    "url": "https://www.smallnstats.com",
+    "email": "sgilroy1@lsu.edu"
+  },
+  "maintainers": [
+    {
+      "name": "Shawn P. Gilroy",
+      "url": "https://www.smallnstats.com",
+      "email": "sgilroy1@lsu.edu"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/miyamot0/scarf-ui-pwa/issues"
+  },
+  "keywords": [
+    "behavioral data",
+    "single case design",
+    "research software"
+  ],
+  "license": "Apache-2.0",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.3.5",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,12 +1,12 @@
-![Static Badge](https://img.shields.io/badge/Version-0.0.0-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple) ![Static Badge](https://img.shields.io/badge/Coverage-0_Percent-orange)
+![Static Badge](https://img.shields.io/badge/Version-0.3.5-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple) ![Static Badge](https://img.shields.io/badge/Coverage-0_Percent-orange)
 
-# SCARF-UI
+# SCARF-UI (PWA)
 
-SCARF-UI is a simple, web-based widget to support the critical appraisals of studies conducted using single-case experimental designs (SCEDs) and visual analysis. The design and functionality of the tool models that of the SCARF toolkit produced by Dr. Jennifer Ledford and colleages, which is available [here](https://ebip.vkcsites.org/scarfv2/).
+SCARF-UI is an installable, offline-first PWA designed to assist in critical appraisals of studies featuring single-case experimental designs (SCEDs). The design and functionality of the tool models that of the SCARF toolkit produced by Dr. Jennifer Ledford and colleages, which is available [here](https://ebip.vkcsites.org/scarfv2/). In short, the PWA provided provides a means of summarizing SCED outcomes without the need for unnecessarily complex spreadsheet and macros.
 
 ## SCARF-UI Visual Outputs
 
-A variety of different visuals are provided to inspect the durability, consistency, and overall correspondence of observed functional relations with other features of study design (e.g., period of maintenance, rigor of generalization).
+A variety of different visuals are provided to inspect the durability, consistency, and overall correspondence of observed functional relations with other features of study design (e.g., period of maintenance, rigor of generalization). The three types of figures are kept consistent with prior revisions and features illustrated in the original SCARF.
 
 ![Visualize Functional Relations given Rigor](public/img/SCARF_Functional_Relation_Given_IV.svg)
 
@@ -22,9 +22,9 @@ The final figure provided illustrates the degree to which outcomes generalize to
 
 ## Using/Accessing the SCARF-UI Tool
 
-The tool provided here is hosted freely at [https://scarfui.smallnstats.com/](https://scarfui.smallnstats.com) and is available for use. However, the tool is presently **under evaluation**.
+The tool provided here is hosted freely at [https://scarfui.smallnstats.com/](https://scarfui.smallnstats.com) and is available for public use in research. However, we note that the tool is presently **under evaluation** at this time and is subject to minor changes as the instrument is refined.
 
-The tool does not save any information remotely and all information stays on the local machine of the user. However, users have the option to import/export their data and disseminate those data as they wish (e.g., for reliability checks, archiving).
+The tool **does not save any information remotely** and all information stays on the local machine of the user. However, users have the option to import/export their data and disseminate those data as they wish (e.g., for reliability checks, archiving).
 
 Interested users are free to download the necessary source code (i.e., clone repo) and build the software on their own if they wish to do so or extend current functionality.
 
@@ -44,47 +44,12 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 
 ## Changelog
 
-### Version 0.3.5
-
-- Expanded tooltips
-- Added in early archiving features
-- Bump to React 19
-
-### Version 0.3.4
-
-- Revert VDOM speedups
-- Add in planning panel
-
-### Version 0.3.x
-
-- Tests (mostly)
-- VDOM speedup
-- Move to cookie storage for theming (hydration headaches)
-- Heatmaps for individual areas of interest
-- Tooltips for ease of coder reference
-- Note taking
-- Visual edits for clarity
-- Fixes for table issues
-
-### Version 0.3.0
-
-- Add in tutorial/instructions page
-- Add in reliability calculation tool
-- Add in table for revealing disagreements
-
-### Version 0.2.0
-
-- Edits for clarity and continuity
-- Option for generating file for the Reliability coder (Note: must have common ID's to ensure they match)
-- Fixes for concurrency
-- New Toast library
-
-### Version 0.1.2
-
-- Distinguish review (i.e., name for project) and coder status (i.e., Primary vs. Reli)
-- Fix backgrounds for vector images to be white by default
-- Light/dark mode
-- Support for later 18n via question imports
+- Version 0.3.5: Add early archiving features, Bump to React 19
+- Version 0.3.4: Introduce planning panel
+- Version 0.3.x: Heatmaps for individual areas of interest, Tooltips, Note taking, Fixes for table issues
+- Version 0.3.0: Add in tutorial/instructions page, reliability calculation tool, and table for revealing disagreements
+- Version 0.2.0: Edits for clarity and continuity, Option for generating file for the Reliability coder (Note: must have common ID's to ensure they match), Fixes for concurrency, New Toast library
+- Version 0.1.2: Distinguish review (i.e., name for project) and coder status (i.e., Primary vs. Reli), Light/dark mode, support 18n
   
 ## Referenced Works
 
@@ -180,5 +145,5 @@ Apache 2.0 - Shawn Gilroy, Louisiana State University
 
 ## Version
 
-Version 0.0.0
+Version 0.3.5
 
