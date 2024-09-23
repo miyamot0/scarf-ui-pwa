@@ -3,22 +3,20 @@ import package_json from '../../../package.json';
 import build_date from '@/assets/build_date.json';
 import { GithubIcon, HomeIcon, TwitterIcon } from 'lucide-react';
 import { Button } from '../ui/button';
+import { Header } from './views/header';
 import { Link } from 'react-router-dom';
-import NavigationBar, { BreadCrumbListing } from './views/navigation-bar';
 
 type Props = {
   children: React.ReactNode;
-  breadcrumbs?: BreadCrumbListing[];
-  label?: string;
   className?: string;
 };
 
-export default function PageWrapper({ children, className, breadcrumbs, label }: Props) {
+export default function PageWrapper({ children, className }: Props) {
   return (
     <main
       className={cn('flex min-h-screen flex-col items-center w-full py-4 mx-2 max-w-screen-xl self-center', className)}
     >
-      <NavigationBar breadcrumbs={breadcrumbs} label={label} />
+      <Header />
 
       {children}
 
