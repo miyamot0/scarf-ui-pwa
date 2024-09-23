@@ -13,6 +13,8 @@ import { DefaultStartingValue, generateRandomStartState } from '@/types/app-stat
 const KEY_LOCAL_STORAGE = 'scarf-web-ui';
 
 const SaveToLocalStorage = (state: GlobalStateType) => {
+  if (state.ReadOnly) return;
+
   localStorage.setItem(KEY_LOCAL_STORAGE, JSON.stringify(state));
 };
 
@@ -33,13 +35,18 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
       return state;
 
     case 'load_external':
-      return action.payload.saved_state;
+      const new_state_ext = {
+        ...action.payload.saved_state,
+        ReadOnly: action.payload.readonly ?? false,
+      };
+
+      return new_state_ext;
 
     case 'reset':
       return DefaultStartingValue;
 
     case 'save_local':
-      SaveToLocalStorage(state);
+      if (state.ReadOnly !== true) SaveToLocalStorage(state);
 
       return {
         ...state,
@@ -68,7 +75,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         Studies: [...state.Studies, new_study],
       };
 
-      if (state.AutoSave) {
+      if (state.AutoSave && !state.ReadOnly) {
         SaveToLocalStorage(new_state);
         return new_state;
       }
@@ -84,7 +91,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         Studies: [...state.Studies, ...action.payload.studies],
       };
 
-      if (state.AutoSave) {
+      if (state.AutoSave && state.ReadOnly !== true) {
         SaveToLocalStorage(new_state);
         return new_state;
       }
@@ -96,7 +103,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         Studies: state.Studies.filter((item) => !action.payload.study_ids.includes(item.StudyID)),
       };
 
-      if (state.AutoSave) {
+      if (state.AutoSave && state.ReadOnly !== true) {
         SaveToLocalStorage(new_state);
         return new_state;
       }
@@ -108,7 +115,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         DisplayState: action.payload.display_state,
       };
 
-      if (state.AutoSave) SaveToLocalStorage(new_state);
+      if (state.AutoSave && state.ReadOnly !== true) SaveToLocalStorage(new_state);
 
       return new_state;
     case 'update_dialog_state':
@@ -117,7 +124,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         DialogState: action.payload.dialog_state,
       };
 
-      if (state.AutoSave) SaveToLocalStorage(new_state);
+      if (state.AutoSave && state.ReadOnly !== true) SaveToLocalStorage(new_state);
 
       return new_state;
     case 'update_study':
@@ -132,7 +139,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         ),
       };
 
-      if (state.AutoSave) {
+      if (state.AutoSave && state.ReadOnly !== true) {
         SaveToLocalStorage(new_state);
         return new_state;
       }
@@ -146,7 +153,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         ),
       };
 
-      if (state.AutoSave) {
+      if (state.AutoSave && state.ReadOnly !== true) {
         SaveToLocalStorage(new_state);
         return new_state;
       }
@@ -164,7 +171,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         AutoSave: action.payload.auto_save,
       };
 
-      if (state.AutoSave) {
+      if (state.AutoSave && state.ReadOnly !== true) {
         SaveToLocalStorage(new_state);
         return new_state;
       }
@@ -176,7 +183,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         Notes: action.payload.notes,
       };
 
-      if (state.AutoSave) {
+      if (state.AutoSave && state.ReadOnly !== true) {
         SaveToLocalStorage(new_state);
         return new_state;
       }
@@ -189,7 +196,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         ReviewPlans: action.payload.plans,
       };
 
-      if (state.AutoSave) {
+      if (state.AutoSave && state.ReadOnly !== true) {
         SaveToLocalStorage(new_state);
         return new_state;
       }

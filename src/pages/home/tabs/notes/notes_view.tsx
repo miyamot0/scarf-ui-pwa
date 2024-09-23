@@ -20,6 +20,7 @@ import { MarkButton } from './views/notes_mark_button';
 import { toggleMark } from './helpers/slate_helpers';
 import { HOTKEYS } from './types/slate_types';
 import { AppStateContext } from '@/components/context/data-provider';
+import { GlobalStateType } from '@/questions/types/GlobalStateType';
 
 const initialValue = [
   {
@@ -33,17 +34,19 @@ const initialValue = [
   },
 ] satisfies Descendant[];
 
-export function NotesTabView({ readonly }: { readonly?: boolean }) {
+export function NotesTabView({ readonly, state }: { readonly?: boolean; state?: GlobalStateType }) {
   const { context, dispatch } = useContext(AppStateContext);
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
 
   const renderElement = useCallback((props: any) => <NotesElement {...props} />, []);
   const renderLeaf = useCallback((props: any) => <NotesLeaf {...props} />, []);
 
+  const state_to_manage = readonly ? state! : context;
+
   return (
     <Slate
       editor={editor}
-      initialValue={context.Notes ?? initialValue}
+      initialValue={state_to_manage.Notes ?? initialValue}
       onChange={(value: Descendant[]) => {
         if (readonly) return;
 

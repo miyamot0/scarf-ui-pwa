@@ -20,6 +20,7 @@ interface DataTableProps<TData, TValue> {
   data: StudyObjectPair[];
 }
 
+// @ts-ignore
 export function StudyReliDataTable<TData, TValue>({ columns, data }: DataTableProps<StudyObjectPair, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);

@@ -6,9 +6,11 @@ import { HeadingComponent } from '../instructions/views/heading_component';
 import { toast } from 'sonner';
 import { useContext } from 'react';
 import { AppStateContext } from '@/components/context/data-provider';
+import { GlobalStateType } from '@/questions/types/GlobalStateType';
+import { StudyStatusDataTableRO } from '@/components/tables/dashboard/study_status_tableRO';
 
-export function StudiesView({ readonly }: { readonly?: boolean }) {
-  const { context, dispatch } = useContext(AppStateContext);
+export function StudiesView({ readonly, context }: { readonly?: boolean; context?: GlobalStateType }) {
+  const { dispatch } = useContext(AppStateContext);
 
   return (
     <div className="flex flex-col gap-y-4">
@@ -45,12 +47,20 @@ export function StudiesView({ readonly }: { readonly?: boolean }) {
         </>
       )}
 
-      <StudyStatusDataTable
-        data={context.Studies}
-        columns={
-          readonly ? study_columns.filter((col) => col.id !== 'actions' && col.id !== 'StudyStatus') : study_columns
-        }
-      />
+      {readonly ? (
+        <StudyStatusDataTableRO
+          columns={
+            readonly ? study_columns.filter((col) => col.id !== 'actions' && col.id !== 'StudyStatus') : study_columns
+          }
+          data={context?.Studies ?? []}
+        />
+      ) : (
+        <StudyStatusDataTable
+          columns={
+            readonly ? study_columns.filter((col) => col.id !== 'actions' && col.id !== 'StudyStatus') : study_columns
+          }
+        />
+      )}
 
       {!readonly && (
         <Button

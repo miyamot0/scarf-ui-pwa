@@ -10,6 +10,7 @@ const outcomesQuestions = require('./generated/outcomes_questions.json') as Ques
 
 const planningQuestions = require('./generated/planning_questions.json') as QuestionObjectHolder[];
 
+/*
 type DisplayDialogType =
   | undefined
   | 'study_import'
@@ -33,6 +34,7 @@ type GlobalStateType = {
   Studies: StudyObject[];
   ReviewPlans: TypeOfPlanningObject;
 };
+*/
 
 type QuestionCategory =
   | 'DV Measurement'

@@ -3,7 +3,7 @@ import PageWrapper from '@/components/layout/page-wrapper';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { DisplayStateType } from '@/questions/types/DisplayStateTypes';
 import { GlobalStateType } from '@/questions/types/GlobalStateType';
-import { useContext, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { toast } from 'sonner';
 import { Hero } from './views/hero';
 import { ButtonBar } from './views/button_bar';
@@ -26,6 +26,10 @@ import { NotesTabView } from './tabs/notes/notes_view';
 export default function HomePage() {
   const { context, dispatch } = useContext(AppStateContext);
   const refFileInput = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    dispatch({ type: 'load_local' });
+  }, []);
 
   const catch_navigation = (local_state: GlobalStateType, display: DisplayStateType) => {
     if (local_state.DisplayState === display) return;
@@ -136,7 +140,7 @@ export default function HomePage() {
                 <EmpiricalTabView />
               </TabsContent>
               <TabsContent value="visuals">
-                <VisualsView />
+                <VisualsView context={context} />
               </TabsContent>
               <TabsContent value="notes">
                 <NotesTabView />

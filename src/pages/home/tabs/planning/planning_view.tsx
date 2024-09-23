@@ -1,7 +1,9 @@
-import { StudyPlanningForm } from '@/components/forms/study_planning/study_planning_form';
 import { HeadingComponent } from '../instructions/views/heading_component';
+import { GlobalStateType } from '@/questions/types/GlobalStateType';
+import { StudyPlanningFormRO } from '@/components/forms/study_planning/study_planning_form_readonly';
+import { StudyPlanningForm } from '@/components/forms/study_planning/study_planning_form';
 
-export function PlanningView({ readonly = false }: { readonly?: boolean }) {
+export function PlanningView({ readonly = false, context }: { readonly?: boolean; context?: GlobalStateType }) {
   return (
     <div className="flex flex-col gap-y-4">
       {!readonly && (
@@ -18,7 +20,7 @@ export function PlanningView({ readonly = false }: { readonly?: boolean }) {
         </>
       )}
 
-      <StudyPlanningForm readonly={readonly} />
+      {readonly ? <StudyPlanningFormRO readonly={true} context={context!} /> : <StudyPlanningForm />}
     </div>
   );
 }

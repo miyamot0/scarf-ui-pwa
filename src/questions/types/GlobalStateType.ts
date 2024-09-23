@@ -15,6 +15,7 @@ export type GlobalStateType = {
   AutoSave?: boolean;
   Notes?: Descendant[];
   NeedSave: boolean;
+  ReadOnly: boolean;
 };
 
 export type SavedGlobalStateType = GlobalStateType & {

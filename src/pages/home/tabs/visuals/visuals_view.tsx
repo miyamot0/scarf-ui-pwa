@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import {
@@ -26,7 +26,7 @@ import { CommonVisualOutput } from '@/types/CommonVisualOutput';
 import { HeatmapIV } from './views/heatmap_iv';
 import { HeatmapDV } from './views/heatmap_dv';
 import { HeatmapReporting } from './views/heatmap_reporting';
-import { AppStateContext } from '@/components/context/data-provider';
+import { GlobalStateType } from '@/questions/types/GlobalStateType';
 
 // TODO: complete hack to suppress error
 const error = console.error;
@@ -35,14 +35,13 @@ console.error = (...args: any) => {
   error(...args);
 };
 
-export function VisualsView() {
-  const { context } = useContext(AppStateContext);
+export function VisualsView({ context }: { context: GlobalStateType }) {
   const [jitter, setJitter] = React.useState(true);
   const [shape, setShape] = React.useState<SymbolType>('circle');
   const [size, setSize] = React.useState<number>(MarkerSizes[0].value);
   const [height, setHeight] = React.useState<number>(FigureHeights[0].value);
 
-  const memoizedData = React.useMemo(() => context.Studies, [context.Studies]);
+  const memoizedData = React.useMemo(() => context.Studies ?? [], [context.Studies]);
 
   const recordsToVisualize = memoizedData.map((study) => {
     const score_internal_validity = CalculateOutcomeScore('Internal Validity', study);

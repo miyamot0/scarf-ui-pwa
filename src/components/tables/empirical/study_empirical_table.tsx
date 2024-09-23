@@ -11,27 +11,29 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Input } from '../../ui/input';
 import { DataTablePagination } from '../general/study_table_pagination';
 import { DataTableViewOptions } from '../general/study_table_column_toggle';
 import { StudyObject } from '@/questions/types/QuestionTypes';
+import { AppStateContext } from '@/components/context/data-provider';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
-  data: StudyObject[];
 }
 
-export function StudyEmpiricalDataTable<TData, TValue>({ columns, data }: DataTableProps<StudyObject, TValue>) {
+// @ts-ignore
+export function StudyEmpiricalDataTable<TData, TValue>({ columns }: DataTableProps<StudyObject, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
   const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({
     StudyID: false,
   });
   const [rowSelection, setRowSelection] = React.useState({});
+  const { context } = useContext(AppStateContext);
 
   const table = useReactTable<StudyObject>({
-    data,
+    data: context.Studies,
     columns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),

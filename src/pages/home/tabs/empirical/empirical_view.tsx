@@ -1,12 +1,10 @@
 import { StudyEmpiricalDataTable } from '@/components/tables/empirical/study_empirical_table';
 import { study_columns } from '@/components/tables/empirical/study_empirical_columns';
 import { HeadingComponent } from '../instructions/views/heading_component';
-import { AppStateContext } from '@/components/context/data-provider';
-import { useContext } from 'react';
+import { GlobalStateType } from '@/questions/types/GlobalStateType';
+import { StudyEmpiricalDataTableRO } from '@/components/tables/empirical/study_empirical_tableRO';
 
-export function EmpiricalTabView({ readonly }: { readonly?: boolean }) {
-  const { context } = useContext(AppStateContext);
-
+export function EmpiricalTabView({ readonly, context }: { readonly?: boolean; context?: GlobalStateType }) {
   return (
     <div className="flex flex-col gap-y-4">
       {!readonly && (
@@ -22,7 +20,11 @@ export function EmpiricalTabView({ readonly }: { readonly?: boolean }) {
         </>
       )}
 
-      <StudyEmpiricalDataTable data={context.Studies} columns={study_columns} />
+      {readonly ? (
+        <StudyEmpiricalDataTableRO columns={study_columns} context={context!} />
+      ) : (
+        <StudyEmpiricalDataTable columns={study_columns} />
+      )}
     </div>
   );
 }

@@ -9,7 +9,7 @@ export type DatabaseAction =
   | {
       type: 'load_local';
     }
-  | { type: 'load_external'; payload: { saved_state: GlobalStateType } }
+  | { type: 'load_external'; payload: { saved_state: GlobalStateType; readonly?: boolean } }
   | { type: 'save_local' }
   | { type: 'generate_random' }
   | { type: 'add' }
