@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/Version-0.0.0-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple) ![Static Badge](https://img.shields.io/badge/Coverage-0_Percent-orange)
+![Static Badge](https://img.shields.io/badge/Version-{{VERSION_NUMBER}}-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple) ![Static Badge](https://img.shields.io/badge/Coverage-{{PERCENTAGE}}-{{PERCENTAGE_COLOR}})
 
 # SCARF-UI
 
@@ -88,91 +88,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
   
 ## Referenced Works
 
-@hookform/resolvers (3.9.0). Copyright bluebill1049 <bluebill1049@hotmail.com> -- MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-accordion (1.2.0). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-alert-dialog (1.1.1). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-checkbox (1.1.1). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-context-menu (2.2.1). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-dialog (1.1.1). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-dropdown-menu (2.1.1). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-icons (1.3.0). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-label (2.1.0). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-menubar (1.1.1). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-navigation-menu (1.2.0). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-scroll-area (1.1.0). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-select (2.1.1). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-slot (1.1.0). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-switch (1.1.0). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-tabs (1.1.0). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-toggle (1.1.0). MIT Licensed: [Repo](n/a) 
- 
-@radix-ui/react-tooltip (1.1.2). MIT Licensed: [Repo](n/a) 
- 
-@tanstack/react-table (8.20.5). Copyright Tanner Linsley -- MIT Licensed: [Repo](n/a) 
- 
-class-variance-authority (0.7.0). Copyright Joe Bell (https://joebell.co.uk) -- Apache-2.0 Licensed: [Repo](n/a) 
- 
-clsx (2.1.1). Copyright Luke Edwards luke.edwards05@gmail.com https://lukeed.com -- MIT Licensed: [Repo](n/a) 
- 
-embla-carousel-react (8.3.0). Copyright David Jerleke -- MIT Licensed: [Repo](n/a) 
- 
-is-hotkey (0.2.0). MIT Licensed: [Repo](n/a) 
- 
-lucide-react (0.445.0). Copyright Eric Fennis -- ISC Licensed: [Repo](n/a) 
- 
-next-themes (0.3.0). MIT Licensed: [Repo](n/a) 
- 
-react (18.3.1). MIT Licensed: [Repo](n/a) 
- 
-react-dom (18.3.1). MIT Licensed: [Repo](n/a) 
- 
-react-hook-form (7.53.0). Copyright <bluebill1049@hotmail.com> -- MIT Licensed: [Repo](n/a) 
- 
-react-router-dom (6.26.2). Copyright Remix Software <hello@remix.run> -- MIT Licensed: [Repo](n/a) 
- 
-react-spreadsheet (0.9.5). Copyright Iddan Aaronsohn <mail@aniddan.com> (https://aniddan.com) -- MIT Licensed: [Repo](n/a) 
- 
-react-use-pwa-install (1.0.1). Copyright Filip Chalupa chalupa.filip@gmail.com https://www.npmjs.com/~onset -- ISC Licensed: [Repo](n/a) 
- 
-recharts (2.12.7). Copyright recharts group -- MIT Licensed: [Repo](n/a) 
- 
-scheduler (0.23.2). MIT Licensed: [Repo](n/a) 
- 
-slate (0.103.0). MIT Licensed: [Repo](n/a) 
- 
-slate-history (0.109.0). MIT Licensed: [Repo](n/a) 
- 
-slate-react (0.110.1). MIT Licensed: [Repo](n/a) 
- 
-sonner (1.5.0). Copyright Emil Kowalski <e@emilkowal.ski> -- MIT Licensed: [Repo](n/a) 
- 
-tailwind-merge (2.5.2). Copyright Dany Castillo -- MIT Licensed: [Repo](n/a) 
- 
-tailwindcss-animate (1.0.7). Copyright Jamie Kyle <me@thejameskyle.com> -- MIT Licensed: [Repo](n/a) 
- 
-uuid (10.0.0). MIT Licensed: [Repo](n/a) 
- 
-vite-plugin-mdx (3.6.0). MIT Licensed: [Repo](n/a) 
- 
-vite-plugin-mdx-plus (1.1.1). Copyright Codpoe <codpoe.me@gmail.com> -- MIT Licensed: [Repo](n/a) 
- 
-zod (3.23.8). Copyright Colin McDonnell <colin@colinhacks.com> -- MIT Licensed: [Repo](n/a) 
+{{LICENSES}}
 
 ## License
 
@@ -180,5 +96,4 @@ Apache 2.0 - Shawn Gilroy, Louisiana State University
 
 ## Version
 
-Version 0.0.0
-
+{{VERSION}}

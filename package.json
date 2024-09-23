@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build-readme": "tsx ./scripts/index.ts",
-    "prebuild": "yarn run build-readme",
+    "check-licenses": "npx license-report --only=prod --output=json > ./scripts/licenses.json",
+    "prebuild": "yarn run check-licenses && yarn run build-readme",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
