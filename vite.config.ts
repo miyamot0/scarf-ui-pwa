@@ -37,7 +37,7 @@ export default defineConfig({
         globPatterns: ['**/*'],
         cleanupOutdatedCaches: true,
         sourcemap: false,
-        maximumFileSizeToCacheInBytes: 300000,
+        maximumFileSizeToCacheInBytes: 3000000,
       },
       manifest: {
         theme_color: '#F5F5F5',
