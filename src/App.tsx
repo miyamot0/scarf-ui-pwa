@@ -1,36 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import '@/styles/globals.css'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
+import { ThemeProvider } from './components/ui/theme-provider';
+import { AppStateContextProvider } from './components/context/data-provider';
+import HomePage from './pages/home/home-page';
+import '@/styles/globals.css';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/">
+      <Route index element={<HomePage />} />
+    </Route>
+  )
+);
+
+/*
+      <Route path="/dashboard" element={<DashboardPage />} />
+
+      <Route path="/documentation" element={<DocumentationListingPage />} />
+      <Route path="/documentation/:slug" element={<DocumentationEntryPage />} />
+
+      <Route path="/session/:Group" element={<ClientsPage />} />
+      <Route path="/session/:Group/:Individual" element={<EvaluationsPage />} />
+      <Route path="/session/:Group/:Individual/keysets" element={<KeySetsPage />} />
+      <Route path="/session/:Group/:Individual/keysets/:KeySet" element={<KeySetEditor />} />
+      <Route path="/session/:Group/:Individual/:Evaluation" element={<SessionDesignerShim />} />
+      <Route path="/session/:Group/:Individual/:Evaluation/history" element={<DashboardHistoryPageShim />} />
+      <Route path="/session/:Group/:Individual/:Evaluation/history/:Index" element={<SessionViewerPageShim />} />
+      <Route path="/session/:Group/:Individual/:Evaluation/proportion" element={<ResultsProportionVisualsPageShim />} />
+      <Route path="/session/:Group/:Individual/:Evaluation/rate" element={<ResultsRateVisualsPageShim />} />
+      <Route path="/session/:Group/:Individual/:Evaluation/reli" element={<ReliabilityViewerPageShim />} />
+      <Route path="/session/:Group/:Individual/:Evaluation/run" element={<SessionRecorderPageShim />} />
+      <Route path="/session/:Group/:Individual/:Evaluation/view" element={<ResultsViewerPageShim />} />
+
+      <Route path="/settings" element={<SettingsPage />} />
+*/
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div className='container'>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <ThemeProvider defaultTheme="system">
+      <AppStateContextProvider>
+        <RouterProvider future={{ v7_startTransition: true }} router={router} />
+      </AppStateContextProvider>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;

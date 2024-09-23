@@ -1,0 +1,210 @@
+[
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_General_1",
+  "QuestionStem": "What is your primary research question? (This should drive inclusion criteria for your review)",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_General_2",
+  "QuestionStem": "What are your inclusion criteria?",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_General_3",
+  "QuestionStem": "Which search strategies will you use? (consider electronic database search, forward search, backward search, hand search)",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_General_4",
+  "QuestionStem": "Describe specifics of search strategies here (e.g., databases, journals to be hand searched, etc.)",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Reporting_1",
+  "QuestionStem": "What demographic information about participants must authors report to get FULL and PARTIAL credit for adequate reporting? Consider what information would assist with determining for whom the intervention has sufficient evidence. (Example: To get full credit, authors must report race/ethnicity, age, and disability status. To get partial credit, authors must report disability status but may be missing other demographics.)",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Reporting_2",
+  "QuestionStem": "What performance information about participantsmust authors report to get FULL and PARTIAL credit for adequate reporting? Consider information that is relevant for your research question. For example, you may require information about play skills if the intervention is conducted in a play-based context, but this would be non-critical information for a question related to discrete trial instruction.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Reporting_3",
+  "QuestionStem": "What inclusion criteria information about participantsmust authors report to get FULL and PARTIAL credit for adequate reporting? Consider information that is relevant for your research question. For example, you may require that authors provide information about functional inclusion criteria likely to impact benefit for FULL credit, give PARTIAL credit if inclusion criteria are all unrelated to theory of change but reported (e.g., population, recruitment location), and give NO credit if inclusion criteria are not reported.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Reporting_4",
+  "QuestionStem": "What recruitment information about participants must authors report to get FULL and PARTIAL credit for adequate reporting? Consider information that is relevant for your research question. For example, FULL credit can be given if authors report the type of recruitment (e.g., email to principals, first 10 people who presented in clinic who met inclusion criteria) and population of interest (e.g., children with autism, individuals with severe and frequent challenging behavior), PARTIAL credit if they report one but not both types of information, and NO credit if they report neither.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Reporting_5",
+  "QuestionStem": "What information about the dependent variable must authors report to get FULL or PARTIAL credit for adequate reporting? For example, for FULL credit, you might require both an operational definition and participant-specific examples and/or non-examples. PARTIAL credit is given if they provide only one of those components, and NO credit is given if authors provide only a general descriptive name (e.g., disruptive behavior).",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Reporting_6",
+  "QuestionStem": "What information about the measurement system must authors report to get FULL or PARTIAL credit for adequate reporting? For example, you might require for FULL credit that authors report system used (e.g., partial interval, timed event recording), and must report when/how (e.g., via video, in situ), and who collects the data. PARTIAL credit woudl be given if authors report system used but fail to report one or both of the other details. NO credit if authors do not report at least system used.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Reporting_7",
+  "QuestionStem": "What information about data collectors must authors report to get FULL and PARTIAL credit for adequate reporting? For example, you might require that authors report the training received and the role (e.g., implementer, graduate student, parent) for FULL credit and either role or training for PARTIAL credit.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_DV_Measurement_4",
+  "QuestionStem": "For the purposes of this review, what frequency is sufficient for reliability data colletion (i.e., how often must authors collect interobserver agreement data in each condition)? If you are primarily interested in only included the studies with the highest believability, or if included studies are expected to have complex dependent variables measured in complex settings, you may want to set a high criterion. Otherwise, you may want to include a lower criterion. ",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_DV_Measurement_5",
+  "QuestionStem": "For the purposes of this review, what criteria must authors meet for sufficiency of reliability data? (e.g., What percentage agreement is acceptable?) Historically, some standards have suggested 80%, but for some dependent variables (e.g., measurement in discrete trial contexts), that may be too low, and if your primary interest is about application in typical contexts/generality, that may be too high.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Reporting_8",
+  "QuestionStem": "What criteria must authors meet for sufficiency of condition procedure descriptions to get FULL or PARTIAL credit for adequate reporting? For example, for FULL credit, they may need to describe all applicable steps or include a fidelity form in appendices or supplemental materials. For PARTIAL credit, authors describe general procedures but do not describe operational steps and rules. ",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Reporting_9",
+  "QuestionStem": "What criteria must authors meet for sufficiency of condition frequency and duration descriptions to get FULL or PARTIAL credit for adequate reporting? For example, for FULL credit, they may need to describe duration of sessions (in either time or number of opportunities/trials) and either how often procedures occurred (e.g., daily) or the total duration of the study and number of sessions (usually apparent on graph). For PARTIAL, they describe one but not both.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Reporting_10",
+  "QuestionStem": "What characteristics of settings must authors describe to meet FULL and PARTIAL credit for adequate reporting Consider social and physical aspects. For example, for FULL credit, authors may need to describe whether other non-participants were present (e.g., in classroom-based interventoins) and what type of room it occurred in (e.g., bedroom, typical classroom, empty resource room). PARTIAL includes one but not both.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Reporting_11",
+  "QuestionStem": "What implementer training/qualification characteristics must authors describe to meet FULL or PARTIAL criteria for adequate reporting? For example, for FULL credit, you may require that authors report the training conducted with implementers and their expertise (e.g., role, certifications, degrees). PARTIAL credit could be given if either but not both are reported.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Reporting_12",
+  "QuestionStem": "What implementer demographic characteristics must authors report to recive FULL or PARTIAL credit for adequate reporting? For example, for FULL credit, you might require reporting of gender, age range, and race/ethnicity. If one but not all are reported, you might report PARTIAL.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Fidelity_2",
+  "QuestionStem": "For the purposes of this review, what safeguards will you require to ensure studies have prevented biased assessment of fidelity? You may elect to answer that safeguards are not present if either of the following are true (a) self-reported fidelity data, and (b) no agreement (IOA) on fidelity data or take a less conservative approach and elect to say no only if clear bias is likely (e.g., self-reported data that are completed long after the study session). Explicate the rules you use here.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Fidelity_3",
+  "QuestionStem": "For the purposes of this review, what frequency is sufficient for fidelity data colletion (i.e., how often must authors collect fidelity data in each condition)? If you are primarily interested in only included the studies with the highest believability, or if included studies are expected to have complex dependent variables measured in complex settings, you may want to set a high criterion. Otherwise, you may want to include a lower criterion. Note that fidelity data may be graphed and is not necessarily reported as a percentage correct (e.g., if your research question is about responsive interventions, you may have a study that graphs the number of adult responsivity behaviors in each condition).",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Fidelity_4",
+  "QuestionStem": "What is your standard for \"acceptable\" fidelity data? Traditionally, an average of 80% or 90% has been considered acceptable but you may require higher or lower percentages. Note that when graphed fidelity data are present, you may need a level change criterion rather than a mean criterion.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Social_Validity_1",
+  "QuestionStem": "Are you interested in assessing whether studies included social validity measurement? If you are assessing social validity measurement, what types of social validity assessments are included? For example, you might consider selection of target behaviors with a teacher prior to data collection a procedure that improves social validity. But, you may only be interested in measuring more formal measures, such as interviews and questionnaires.",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Generality_Boundedness_1",
+  "QuestionStem": "Is implementation in a relevant typical setting applicable to your research question (e.g., in homes, schools, or community settings)?  If so, which settings are of interest?",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Generality_Boundedness_3",
+  "QuestionStem": "Is implementation by a relevant endogenous implementer applicable to your research question (e.g., implementation by teachers rather than researchers)? If so, which implementers are of interest?",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Generality_Boundedness_5",
+  "QuestionStem": "Do you have a question about generalized outcomes? If so, clarify here what types of outcomes qualify. These questions might include generalization to materials, social partners, activities (stimulus generalization) or generalization to dependent variables that you are not considering a primary outcome (response generalization).",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Planning",
+  "QuestionID": "Plan_Maintenance_1",
+  "QuestionStem": "Do you have a research question about whether maintenance of behavior occurred when intervention was removed? Clarify whether you are interested in both maintenance conditions where interventions are in place or only in maintenance conditions where interventions are removed (e.g., some maintenance conditions include no-treatment baseline contingencies while others include treatment contingencies that continue)",
+  "QuestionInstruction": "",
+  "QuestionType": "Text",
+  "Locale": "en-us"
+ }
+]

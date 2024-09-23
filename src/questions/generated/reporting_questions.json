@@ -1,0 +1,106 @@
+[
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_1",
+  "QuestionStem": "Do authors report demographic information (gender, race, age) and disability status (if relevant)?",
+  "QuestionInstruction": "Decisions on specific information necessary for a “yes” score here should be made prior to review (e.g., specific disability eligibility, medical diagnosis, information about special education services). Explicate what data are required for \"yes\", \"no\", and \"partial\" codes.",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_2",
+  "QuestionStem": "Do authors report information relevant to current performance in domains related to the study?",
+  "QuestionInstruction": "Decisions on specific information necessary for a “yes” score here should be made prior to review (e.g., description of typical social interactions or a formal social skills assessment if the study focuses on social skill intervention; description of functional behavioral assessment if the study focuses on challenging behavior). Explicate what data are required for \"yes\", \"no\", and \"partial\" codes.",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_3",
+  "QuestionStem": "Do authors report relevant inclusion criteria?",
+  "QuestionInstruction": "Decisions on specific information necessary for a “yes” score here should be made prior to review. These criteria should include characteristics necessary to benefit from study participation.",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_4",
+  "QuestionStem": "Do authors report relevant recruitment information?",
+  "QuestionInstruction": "Decisions on specific information necessary for a “yes” score here should be made prior to review. Generally, it should include the population from which participants were recruited (e.g., elementary-aged children with Down syndrome) locations from which participants were recruited (e.g., children who attended a private school for autistic children were recruited), and/or methods by which participants were recruited (e.g., researchers recruited participants by providing flyers to parents via local pediatricians).",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_5",
+  "QuestionStem": "Do authors adequately define dependent variables?",
+  "QuestionInstruction": "Decisions on specific information necessary for a “yes” score here should be made prior to review. Could a naïve reader determine the presence of absence of behavior based on definitions, examples, and/or non-examples?",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_6",
+  "QuestionStem": "Do authors adequately describe measurement system used?",
+  "QuestionInstruction": "Decisions on specific information necessary for a “yes” score here should be made prior to review. For example do authors describe data collection, including the system used (e.g., momentary time sampling, timed event recording), how data were collected (e.g., in situ, via video), and by whom (e.g., endogenous implementer, graduate student observer).",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_7",
+  "QuestionStem": "Do authors describe role and training of data collectors?",
+  "QuestionInstruction": "Decisions on specific information necessary for a “yes” score here should be made prior to review. At minimum, authors should describe the relation of data collectors to participants (e.g., researcher who was unfamiliar to participants prior to study, classroom teacher of participants) and how data collectors were trained.",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_8",
+  "QuestionStem": "Are procedures for both primary comparison conditions adequately described?",
+  "QuestionInstruction": "Decisions on specific information necessary for a “yes” score here should be prior to review. Are procedures described with replicable precision? Fidelity checklists may be helpful for determining exact procedures for each condition.",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_9",
+  "QuestionStem": "Are the frequency and duration of conditions well described?",
+  "QuestionInstruction": "Decisions on specific information necessary for a “yes” score here should be made prior to review. Do authors report how long sessions occurred (e.g., 20 min), how often they occurred (e.g., weekly), and what opportunities to respond were present during sessions (if applicable)?",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_10",
+  "QuestionStem": "Is setting described for both primary comparison conditions (i.e., if relevant: location, individuals in environment, physical characteristics)?",
+  "QuestionInstruction": "Decisions on specific information necessary for a “yes” score here should be made prior to review. Do authors describe the aspects of setting critical for replication.",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_11",
+  "QuestionStem": "Do authors describe qualifications of implementers, or describe what skills and training were necessary for intervention implementation?",
+  "QuestionInstruction": "Decisions on specific information necessary for a “yes” score here should be made prior to review. Authors should describe implementers with enough detail that naïve readers could understand contexts for replication (e.g., training, education, years of experience).",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_12",
+  "QuestionStem": "Do authors describe demographic characteristics of implementers?",
+  "QuestionInstruction": "Decisions on specific information necessary for a “yes” score here should be made prior to review. Authors should describe implementers with enough detail that naïve readers could understand contexts for replication (e.g., age, race, ethnicity, languages spoken).",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ },
+ {
+  "Category": "Reporting",
+  "QuestionID": "Reporting_13",
+  "QuestionStem": "Do authors adequately describe which implementer behaviors are measured for fidelity assessments?",
+  "QuestionInstruction": "Is fidelity described well enough that reviewers could replicate procedures and assessment? This may include narrative description and/or inclusion of fidelity tables or forms (including those shared in readily-available supplemental materials). Explicate what data are required for \"yes\", \"no\", and \"partial\" codes.",
+  "QuestionType": "YesNoPartial",
+  "Locale": "en-us"
+ }
+]
