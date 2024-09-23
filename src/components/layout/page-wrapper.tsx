@@ -25,11 +25,11 @@ export default function PageWrapper({ children, className, breadcrumbs, label }:
       <footer className="text-center text-sm text-gray-500 my-8 flex flex-col gap-4 select-none font-semibold">
         <div>
           <Link
-            to={`https://github.com/miyamot0/datatracker-pwa`}
+            to={`https://github.com/miyamot0/scarf-ui-pwa`}
             className="text-blue-600 hover:text-blue-500 underline"
             target="_blank"
           >
-            DataTracker (PWA)
+            SCARF-UI (PWA)
           </Link>{' '}
           is FOSS developed by{' '}
           <Link

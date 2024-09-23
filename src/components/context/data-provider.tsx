@@ -12,6 +12,8 @@ export type GlobalContextType = {
   saveSettings: (context: GlobalStateType) => void;
 };
 
+const KEY_LOCAL_STORAGE = 'scarf-web-ui';
+
 export const AppStateContext = createContext({
   context: DefaultStartingValue,
   setAppContext: undefined as unknown as Dispatch<SetStateAction<GlobalStateType>>,
@@ -31,10 +33,12 @@ export function AppStateContextProvider({ children }: { children: ReactNode }) {
     const new_context = database_reducer(context, action);
 
     setAppContext(new_context);
+
+    localStorage.setItem(KEY_LOCAL_STORAGE, JSON.stringify(new_context));
   };
 
   useEffect(() => {
-    const settings = localStorage.getItem('scarf_ui_settings');
+    const settings = localStorage.getItem(KEY_LOCAL_STORAGE);
     if (settings) {
       const parsedSettings = JSON.parse(settings);
 

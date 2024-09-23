@@ -16,6 +16,12 @@ import { StudyImportDialog } from '@/components/dialogs/study_import_dialog';
 import { StudyInternalValidityDialog } from '@/components/dialogs/study_internal_validity_dialog';
 import { StudyOutcomesDialog } from '@/components/dialogs/study_outcomes_dialog';
 import { StudyReportingDialog } from '@/components/dialogs/study_reporting_dialog';
+import { InstructionsView } from './tabs/instructions/instructions_view';
+import { PlanningView } from './tabs/planning/planning_view';
+import { StudiesView } from './tabs/studies/studies_view';
+import { EmpiricalTabView } from './tabs/empirical/empirical_view';
+import { VisualsView } from './tabs/visuals/visuals_view';
+import { NotesTabView } from './tabs/notes/notes_view';
 
 export default function HomePage() {
   const { context, dispatch } = useContext(AppStateContext);
@@ -43,7 +49,7 @@ export default function HomePage() {
   return (
     <PageWrapper>
       <Hero />
-      <div className="flex flex-col gap-y-4">
+      <div className="flex flex-col gap-y-4 w-full">
         <Card className="w-full">
           <CardHeader className="flex flex-row justify-between">
             <div className="flex flex-col">
@@ -51,7 +57,7 @@ export default function HomePage() {
               <CardDescription>{`Reviewer Type: ${context.ReviewType ?? 'Primary'}`}</CardDescription>
             </div>
 
-            <ButtonBar state={context} dispatch={undefined as any} refFileInput={refFileInput} />
+            <ButtonBar state={context} dispatch={dispatch} refFileInput={refFileInput} />
           </CardHeader>
           <CardContent>
             <Tabs value={context.DisplayState} className={cn('w-full flex flex-col gap-y-4')}>
@@ -118,40 +124,22 @@ export default function HomePage() {
                 </TabsTrigger>
               </TabsList>
               <TabsContent value="instructions">
-                <div>Temp 1</div>
-                {
-                  //<InstructionsView />
-                }
+                <InstructionsView />
               </TabsContent>
               <TabsContent value="planning">
-                <div>Temp 2</div>
-                {
-                  //<PlanningView />
-                }
+                <PlanningView />
               </TabsContent>
               <TabsContent value="studies">
-                <div>Temp 3</div>
-                {
-                  //<StudiesView />
-                }
+                <StudiesView />
               </TabsContent>
               <TabsContent value="empirical">
-                <div>Temp 4</div>
-                {
-                  //<EmpiricalTabView />
-                }
+                <EmpiricalTabView />
               </TabsContent>
               <TabsContent value="visuals">
-                <div>Temp 5</div>
-                {
-                  //<VisualsView />
-                }
+                <VisualsView />
               </TabsContent>
               <TabsContent value="notes">
-                <div>Temp 6</div>
-                {
-                  //<NotesTabView />
-                }
+                <NotesTabView />
               </TabsContent>
             </Tabs>
           </CardContent>
