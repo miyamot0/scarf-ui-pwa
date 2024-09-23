@@ -28,7 +28,8 @@ export const Header = () => {
     <NavigationMenu className="w-full justify-between max-w-full">
       <NavigationMenuList className="gap-x-4 ">
         <NavigationMenuLink
-          href="/"
+          to="/"
+          unstable_viewTransition
           className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
         >
           <SheetIcon size={20} />
@@ -36,7 +37,8 @@ export const Header = () => {
         </NavigationMenuLink>
 
         <NavigationMenuLink
-          href={INFORMATION_LINK}
+          to={INFORMATION_LINK}
+          unstable_viewTransition
           className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
         >
           <ListChecksIcon size={20} />
@@ -44,7 +46,8 @@ export const Header = () => {
         </NavigationMenuLink>
 
         <NavigationMenuLink
-          href={RELIABILITY_LINK}
+          to={RELIABILITY_LINK}
+          unstable_viewTransition
           className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
         >
           <UserSearchIcon size={20} />
@@ -52,7 +55,8 @@ export const Header = () => {
         </NavigationMenuLink>
 
         <NavigationMenuLink
-          href={ARCHIVES_LINK}
+          to={ARCHIVES_LINK}
+          unstable_viewTransition
           className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
         >
           <DatabaseIcon size={20} />
@@ -80,7 +84,12 @@ export const Header = () => {
               </span>
               <span>
                 Information on the original SCARF tool and its design and purpose is available at{' '}
-                <Link className="text-blue-600" to={'https://ebip.vkcsites.org/scarfv2/'} target="_blank">
+                <Link
+                  unstable_viewTransition
+                  className="text-blue-600"
+                  to={'https://ebip.vkcsites.org/scarfv2/'}
+                  target="_blank"
+                >
                   https://ebip.vkcsites.org/scarfv2/
                 </Link>
                 , the personal website of Dr. Jennifer Ledford.

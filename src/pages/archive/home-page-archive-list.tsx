@@ -31,7 +31,7 @@ export default function HomePageArchiveListing() {
           <CardHeader>
             <CardTitle>Archived SCARF-UI Records</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="min-h-[400px]">
             <Table>
               <TableHeader>
                 <TableRow>
