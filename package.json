@@ -1,4 +1,5 @@
 {
+  "version": "0.3.6",
   "name": "scarf-ui-pwa",
   "description": "SCARF-UI-PWA is a PWA to support research synthesis featuring SCEDs",
   "homepage": "https://www.smallnstats.com",
@@ -28,7 +29,6 @@
   ],
   "license": "Apache-2.0",
   "private": true,
-  "version": "0.3.5",
   "type": "module",
   "scripts": {
     "dev": "vite",

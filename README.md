@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/Version-0.3.5-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple) ![Static Badge](https://img.shields.io/badge/Coverage-0_Percent-orange)
+![Static Badge](https://img.shields.io/badge/Version-0.3.6-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple) ![Static Badge](https://img.shields.io/badge/Coverage-0_Percent-orange)
 
 # SCARF-UI (PWA)
 
@@ -44,6 +44,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 
 ## Changelog
 
+- Version 0.3.6: PWA Vite port, add initial icon set
 - Version 0.3.5: Add early archiving features, Bump to React 19
 - Version 0.3.4: Introduce planning panel
 - Version 0.3.x: Heatmaps for individual areas of interest, Tooltips, Note taking, Fixes for table issues
@@ -145,5 +146,5 @@ Apache 2.0 - Shawn Gilroy, Louisiana State University
 
 ## Version
 
-Version 0.3.5
+Version 0.3.6
 
