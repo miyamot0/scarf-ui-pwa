@@ -44,6 +44,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 
 ## Changelog
 
+- Version 0.3.7: Add in screenshots, edits based on reviews
 - Version 0.3.6: PWA Vite port, add initial icon set
 - Version 0.3.5: Add early archiving features, Bump to React 19
 - Version 0.3.4: Introduce planning panel
@@ -51,7 +52,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 - Version 0.3.0: Add in tutorial/instructions page, reliability calculation tool, and table for revealing disagreements
 - Version 0.2.0: Edits for clarity and continuity, Option for generating file for the Reliability coder (Note: must have common ID's to ensure they match), Fixes for concurrency, New Toast library
 - Version 0.1.2: Distinguish review (i.e., name for project) and coder status (i.e., Primary vs. Reli), Light/dark mode, support 18n
-  
+
 ## Referenced Works
 
 {{LICENSES}}

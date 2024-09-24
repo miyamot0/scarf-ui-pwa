@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/Version-0.3.6-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple) ![Static Badge](https://img.shields.io/badge/Coverage-0_Percent-orange)
+![Static Badge](https://img.shields.io/badge/Version-0.3.7-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple) ![Static Badge](https://img.shields.io/badge/Coverage-0_Percent-orange)
 
 # SCARF-UI (PWA)
 
@@ -44,6 +44,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 
 ## Changelog
 
+- Version 0.3.7: Add in screenshots, edits based on reviews
 - Version 0.3.6: PWA Vite port, add initial icon set
 - Version 0.3.5: Add early archiving features, Bump to React 19
 - Version 0.3.4: Introduce planning panel
@@ -51,7 +52,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 - Version 0.3.0: Add in tutorial/instructions page, reliability calculation tool, and table for revealing disagreements
 - Version 0.2.0: Edits for clarity and continuity, Option for generating file for the Reliability coder (Note: must have common ID's to ensure they match), Fixes for concurrency, New Toast library
 - Version 0.1.2: Distinguish review (i.e., name for project) and coder status (i.e., Primary vs. Reli), Light/dark mode, support 18n
-  
+
 ## Referenced Works
 
 @hookform/resolvers (3.9.0). Copyright bluebill1049 <bluebill1049@hotmail.com> -- MIT Licensed: [Repo](https://github.com/react-hook-form/resolvers.git) 
@@ -146,5 +147,5 @@ Apache 2.0 - Shawn Gilroy, Louisiana State University
 
 ## Version
 
-Version 0.3.6
+Version 0.3.7
 

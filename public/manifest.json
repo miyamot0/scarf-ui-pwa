@@ -62,11 +62,32 @@
   "id": "/",
   "screenshots": [
     {
-      "src": "screenshots/visualization.png",
-      "sizes": "2860x1284",
+      "src": "screenshots/plots.png",
+      "sizes": "1424x886",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Illustration of recorded data"
+      "label": "Dynamically-generated visuals of plot data with tooltip support"
+    },
+    {
+      "src": "screenshots/viewer.png",
+      "sizes": "1424x886",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Easy organization and management of study appraisal data"
+    },
+    {
+      "src": "screenshots/empirical.png",
+      "sizes": "1424x886",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Quick visualization of data 'at-a-glance'"
+    },
+    {
+      "src": "screenshots/import.png",
+      "sizes": "1424x886",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Quick important of critical study data"
     }
   ]
 }
