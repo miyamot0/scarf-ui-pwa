@@ -3,7 +3,7 @@ import PageWrapper from '@/components/layout/page-wrapper';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { DisplayStateType } from '@/questions/types/DisplayStateTypes';
 import { GlobalStateType } from '@/questions/types/GlobalStateType';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { toast } from 'sonner';
 import { Hero } from './views/hero';
 import { ButtonBar } from './views/button_bar';
@@ -26,10 +26,6 @@ import { NotesTabView } from './tabs/notes/notes_view';
 export default function HomePage() {
   const { context, dispatch } = useContext(AppStateContext);
   const refFileInput = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    dispatch({ type: 'load_local' });
-  }, []);
 
   const catch_navigation = (local_state: GlobalStateType, display: DisplayStateType) => {
     if (local_state.DisplayState === display) return;
@@ -55,7 +51,7 @@ export default function HomePage() {
       <Hero />
       <div className="flex flex-col gap-y-4 w-full">
         <Card className="w-full">
-          <CardHeader className="flex flex-row justify-between">
+          <CardHeader className="flex flex-col md:flex-row justify-between gap-2">
             <div className="flex flex-col">
               <CardTitle>{`Review Name: ${context.ReviewName ?? 'UNNAMED'}`}</CardTitle>
               <CardDescription>{`Reviewer Type: ${context.ReviewType ?? 'Primary'}`}</CardDescription>
@@ -65,7 +61,7 @@ export default function HomePage() {
           </CardHeader>
           <CardContent>
             <Tabs value={context.DisplayState} className={cn('w-full flex flex-col gap-y-4')}>
-              <TabsList className="w-full flex flex-row border">
+              <TabsList className="w-full flex flex-wrap md:flex-nowrap flex-row border h-fit">
                 <TabsTrigger
                   value="instructions"
                   className="w-full"

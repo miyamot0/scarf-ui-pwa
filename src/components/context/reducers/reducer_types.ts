@@ -13,6 +13,7 @@ export type DatabaseAction =
   | { type: 'save_local' }
   | { type: 'generate_random' }
   | { type: 'add' }
+  | { type: 'add_copy'; payload: { study_id: string } }
   | {
       type: 'update_display_state';
       payload: { display_state: DisplayStateType };

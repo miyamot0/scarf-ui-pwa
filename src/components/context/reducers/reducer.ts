@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 import type { GlobalStateType } from '@/questions/types/GlobalStateType';
 import {
   InternalValidityQuestionDefault,
@@ -17,6 +18,15 @@ const SaveToLocalStorage = (state: GlobalStateType) => {
 
   localStorage.setItem(KEY_LOCAL_STORAGE, JSON.stringify(state));
 };
+
+const insertStudy = (arr: StudyObject[], index: number, newItem: StudyObject) => [
+  // part of the array before the specified index
+  ...arr.slice(0, index),
+  // inserted items
+  newItem,
+  // part of the array after the specified index
+  ...arr.slice(index),
+];
 
 export const database_reducer = (state: GlobalStateType, action: DatabaseAction) => {
   let new_state;
@@ -81,6 +91,35 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
       }
 
       return { ...new_state, NeedSave: true };
+
+    case 'add_copy':
+      const study_to_copy = state.Studies.find((item) => item.StudyID === action.payload.study_id);
+
+      if (!study_to_copy) throw new Error(`Study with ID ${action.payload.study_id} not found`);
+
+      const copied_study: StudyObject = {
+        ...study_to_copy,
+        StudyTitle: `${study_to_copy.StudyTitle} (Copy)`,
+        StudyTag: `${study_to_copy.StudyTag} (Copy)`,
+        StudyID: uuidv4(),
+      };
+
+      const index_to_insert = state.Studies.findIndex((item) => item.StudyID === action.payload.study_id);
+
+      const new_studies = insertStudy(state.Studies, index_to_insert + 1, copied_study);
+
+      new_state = {
+        ...state,
+        Studies: [...new_studies],
+      };
+
+      if (state.AutoSave) {
+        SaveToLocalStorage(new_state);
+        return new_state;
+      }
+
+      return { ...new_state };
+
     case 'bulk_import_studies':
       new_state = {
         ...state,
@@ -189,7 +228,6 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
       }
 
       return { ...new_state, NeedSave: true };
-
     case 'update_review_plans':
       new_state = {
         ...state,
