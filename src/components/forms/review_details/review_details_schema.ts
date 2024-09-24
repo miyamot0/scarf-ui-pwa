@@ -1,5 +1,3 @@
-'use client'
-
 import { z } from 'zod'
 import { Review_Types } from '@/types/ReviewTypes'
 

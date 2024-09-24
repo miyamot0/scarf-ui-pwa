@@ -64,13 +64,14 @@ export const Header = () => {
             <span className="hidden md:flex">Archives</span>
           </NavigationMenuLink>
         </NavigationMenuList>
-      </NavigationMenu>{' '}
+      </NavigationMenu>
+
       <div className="flex flex-row gap-2">
         <Dialog>
           <DialogTrigger asChild>
             <Button variant="outline" size="icon">
               <InfoIcon size={20} />
-              <span className="sr-only">Toggle theme</span>
+              <span className="sr-only">SCARF App Information</span>
             </Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[600px]">
@@ -87,7 +88,7 @@ export const Header = () => {
                 Information on the original SCARF tool and its design and purpose is available at{' '}
                 <Link
                   unstable_viewTransition
-                  className="text-blue-600"
+                  className="text-blue-400 underline"
                   to={'https://ebip.vkcsites.org/scarfv2/'}
                   target="_blank"
                 >
@@ -103,7 +104,7 @@ export const Header = () => {
           <DialogTrigger asChild>
             <Button variant="outline" size="icon">
               <Code2Icon size={20} />
-              <span className="sr-only">Toggle theme</span>
+              <span className="sr-only">Application Licenses</span>
             </Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[600px]">
@@ -116,13 +117,13 @@ export const Header = () => {
                 .sort((a, b) => a.name.localeCompare(b.name))
                 .map((license) => {
                   return (
-                    <span key={license.name}>
-                      {`${license.name} (${license.license})`} -
-                      <Link className="text-blue-600" to={license.link} target="_blank">
-                        {' '}
-                        Link
+                    <div key={license.name} className="flex flex-row justify-between">
+                      <span>{`${license.name} (${license.license}) - `}</span>
+
+                      <Link className="text-blue-400 underline" to={license.link} target="_blank">
+                        Repository
                       </Link>
-                    </span>
+                    </div>
                   );
                 })}
             </div>
@@ -133,7 +134,7 @@ export const Header = () => {
           <DialogTrigger asChild>
             <Button variant="outline" size="icon">
               <GithubIcon size={20} />
-              <span className="sr-only">Toggle theme</span>
+              <span className="sr-only">SCARF Source Code</span>
             </Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[600px]">
@@ -145,8 +146,8 @@ export const Header = () => {
               <span>
                 The source code necessary to inspect, build, or otherwise extend the SCARF-UI web app is provided
                 publicly at{' '}
-                <Link className="text-blue-600" to={'https://github.com/miyamot0/scarf-ui'}>
-                  https://github.com/miyamot0/scarf-ui
+                <Link className="text-blue-400 underline" to={'https://github.com/miyamot0/scarf-ui-pwa'}>
+                  https://github.com/miyamot0/scarf-ui-pwa
                 </Link>{' '}
                 under the permissive MIT license.
               </span>
