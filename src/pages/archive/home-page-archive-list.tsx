@@ -48,7 +48,9 @@ export default function HomePageArchiveListing() {
                     <TableCell>{data_record.Title}</TableCell>
                     <TableCell>{data_record.DateSaved}</TableCell>
                     <TableCell>
-                      <Link to={`${ARCHIVES_LINK}/${data_record.ID}`}>View</Link>
+                      <Link unstable_viewTransition to={`${ARCHIVES_LINK}/${data_record.ID}`}>
+                        View
+                      </Link>
                     </TableCell>
                   </TableRow>
                 ))}

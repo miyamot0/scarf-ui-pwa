@@ -1,89 +1,73 @@
-import type { RefObject } from 'react'
+import type { RefObject } from 'react';
 
-type ImageFormatTypes = 'svg' | 'png' | 'jpeg' | 'webp'
+type ImageFormatTypes = 'svg' | 'png' | 'jpeg' | 'webp';
 
 function download(href: string, name: string) {
-    var link = document.createElement('a')
-    link.download = name
-    link.style.opacity = '0'
-    document.body.append(link)
-    link.href = href
-    link.click()
-    link.remove()
+  const link = document.createElement('a');
+  link.download = name;
+  link.style.opacity = '0';
+  document.body.append(link);
+  link.href = href;
+  link.click();
+  link.remove();
 }
 
 export function ExtractRelevantImage(ref: RefObject<HTMLDivElement | null>) {
-    if (ref === null || !ref.current) {
-        throw new Error('Ref is null')
-    }
+  if (ref === null || !ref.current) {
+    throw new Error('Ref is null');
+  }
 
-    const svg_element = ref.current.getElementsByClassName('recharts-surface')
+  const svg_element = ref.current.getElementsByClassName('recharts-surface');
 
-    if (svg_element && svg_element.length === 1) {
-        return svg_element[0] as SVGSVGElement
-    }
+  if (svg_element && svg_element.length === 1) {
+    return svg_element[0] as SVGSVGElement;
+  }
 
-    throw new Error('SVG Element not found')
+  throw new Error('SVG Element not found');
 }
 
-export function FigureOutputExportNew(
-    format: ImageFormatTypes,
-    filename: string,
-    figure: SVGSVGElement
-) {
-    figure.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-    figure.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink')
+export function FigureOutputExportNew(format: ImageFormatTypes, filename: string, figure: SVGSVGElement) {
+  figure.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  figure.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
 
-    const blob = new Blob([figure.outerHTML], {
-        type: 'image/svg+xml;charset=utf-8',
-    })
+  const blob = new Blob([figure.outerHTML], {
+    type: 'image/svg+xml;charset=utf-8',
+  });
 
-    if (format === 'svg') {
-        download(window.URL.createObjectURL(blob), `${filename}.${format}`)
-    } else if (figure) {
-        const URL = window.URL || window.webkitURL || window
-        const blobURL = URL.createObjectURL(blob)
+  if (format === 'svg') {
+    download(window.URL.createObjectURL(blob), `${filename}.${format}`);
+  } else if (figure) {
+    const URL = window.URL || window.webkitURL || window;
+    const blobURL = URL.createObjectURL(blob);
 
-        const image = new Image()
-        image.onload = () => {
-            const canvas = document.createElement('canvas')
-            canvas.width = figure.clientWidth
-            canvas.height = figure.clientHeight
+    const image = new Image();
+    image.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = figure.clientWidth;
+      canvas.height = figure.clientHeight;
 
-            const context = canvas.getContext('2d')
-            if (!context) throw new Error('Canvas context not found')
+      const context = canvas.getContext('2d');
+      if (!context) throw new Error('Canvas context not found');
 
-            context.fillStyle = '#FFFFFF'
-            context.fillRect(0, 0, canvas.width, canvas.height)
+      context.fillStyle = '#FFFFFF';
+      context.fillRect(0, 0, canvas.width, canvas.height);
 
-            context.drawImage(
-                image,
-                0,
-                0,
-                figure.clientWidth,
-                figure.clientHeight
-            )
+      context.drawImage(image, 0, 0, figure.clientWidth, figure.clientHeight);
 
-            switch (format) {
-                case 'png':
-                    download(canvas.toDataURL(), `${filename}.${format}`)
-                    break
-                case 'jpeg':
-                    download(
-                        canvas.toDataURL('image/jpeg'),
-                        `${filename}.${format}`
-                    )
-                    break
-                case 'webp':
-                    download(
-                        canvas.toDataURL('image/webp'),
-                        `${filename}.${format}`
-                    )
-                    break
-            }
-        }
-        image.src = blobURL
-    }
+      switch (format) {
+        case 'png':
+          download(canvas.toDataURL(), `${filename}.${format}`);
+          break;
+        case 'jpeg':
+          download(canvas.toDataURL('image/jpeg'), `${filename}.${format}`);
+          break;
+        case 'webp':
+          download(canvas.toDataURL('image/webp'), `${filename}.${format}`);
+          break;
+      }
+    };
+    image.src = blobURL;
+  }
 }
 
 /*
