@@ -25,45 +25,46 @@ export const ARCHIVES_LINK = '/archives';
 
 export const Header = () => {
   return (
-    <NavigationMenu className="w-full justify-between max-w-full">
-      <NavigationMenuList className="gap-x-4 ">
-        <NavigationMenuLink
-          to="/"
-          unstable_viewTransition
-          className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
-        >
-          <SheetIcon size={20} />
-          Data Entry
-        </NavigationMenuLink>
+    <div className="w-full flex flex-col md:flex-row gap-4 justify-between">
+      <NavigationMenu className="w-full justify-between max-w-full">
+        <NavigationMenuList className="gap-x-2 ">
+          <NavigationMenuLink
+            to="/"
+            unstable_viewTransition
+            className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
+          >
+            <SheetIcon size={20} />
+            <span className="hidden md:flex">Data Entry</span>
+          </NavigationMenuLink>
 
-        <NavigationMenuLink
-          to={INFORMATION_LINK}
-          unstable_viewTransition
-          className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
-        >
-          <ListChecksIcon size={20} />
-          Instructions
-        </NavigationMenuLink>
+          <NavigationMenuLink
+            to={INFORMATION_LINK}
+            unstable_viewTransition
+            className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
+          >
+            <ListChecksIcon size={20} />
+            <span className="hidden md:flex">Instructions</span>
+          </NavigationMenuLink>
 
-        <NavigationMenuLink
-          to={RELIABILITY_LINK}
-          unstable_viewTransition
-          className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
-        >
-          <UserSearchIcon size={20} />
-          Reliability
-        </NavigationMenuLink>
+          <NavigationMenuLink
+            to={RELIABILITY_LINK}
+            unstable_viewTransition
+            className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
+          >
+            <UserSearchIcon size={20} />
+            <span className="hidden md:flex">Reliability</span>
+          </NavigationMenuLink>
 
-        <NavigationMenuLink
-          to={ARCHIVES_LINK}
-          unstable_viewTransition
-          className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
-        >
-          <DatabaseIcon size={20} />
-          Archives
-        </NavigationMenuLink>
-      </NavigationMenuList>
-
+          <NavigationMenuLink
+            to={ARCHIVES_LINK}
+            unstable_viewTransition
+            className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
+          >
+            <DatabaseIcon size={20} />
+            <span className="hidden md:flex">Archives</span>
+          </NavigationMenuLink>
+        </NavigationMenuList>
+      </NavigationMenu>{' '}
       <div className="flex flex-row gap-2">
         <Dialog>
           <DialogTrigger asChild>
@@ -155,6 +156,6 @@ export const Header = () => {
 
         <ThemeToggle />
       </div>
-    </NavigationMenu>
+    </div>
   );
 };
