@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/Version-0.3.7-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple) ![Static Badge](https://img.shields.io/badge/Coverage-0_Percent-orange)
+![Static Badge](https://img.shields.io/badge/Version-0.3.8-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple) ![Static Badge](https://img.shields.io/badge/Coverage-0_Percent-orange)
 
 # SCARF-UI (PWA)
 
@@ -57,7 +57,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 
 @hookform/resolvers (3.9.0). Copyright bluebill1049 <bluebill1049@hotmail.com> -- MIT Licensed: [Repo](https://github.com/react-hook-form/resolvers.git) 
  
-@radix-ui/react-accordion (1.2.0). MIT Licensed: [Repo](https://github.com/radix-ui/primitives.git) 
+@mdx-js/mdx (3.0.1). Copyright John Otander <johnotander@gmail.com> (https://johno.com) -- MIT Licensed: [Repo](https://github.com/mdx-js/mdx.git) 
  
 @radix-ui/react-alert-dialog (1.1.1). MIT Licensed: [Repo](https://github.com/radix-ui/primitives.git) 
  
@@ -72,8 +72,6 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 @radix-ui/react-icons (1.3.0). MIT Licensed: [Repo](https://registry.npmjs.org/@radix-ui/react-icons/-/react-icons-1.3.0.tgz) 
  
 @radix-ui/react-label (2.1.0). MIT Licensed: [Repo](https://github.com/radix-ui/primitives.git) 
- 
-@radix-ui/react-menubar (1.1.1). MIT Licensed: [Repo](https://github.com/radix-ui/primitives.git) 
  
 @radix-ui/react-navigation-menu (1.2.0). MIT Licensed: [Repo](https://github.com/radix-ui/primitives.git) 
  
@@ -97,13 +95,9 @@ class-variance-authority (0.7.0). Copyright Joe Bell (https://joebell.co.uk) -- 
  
 clsx (2.1.1). Copyright Luke Edwards luke.edwards05@gmail.com https://lukeed.com -- MIT Licensed: [Repo](https://github.com/lukeed/clsx.git) 
  
-embla-carousel-react (8.3.0). Copyright David Jerleke -- MIT Licensed: [Repo](https://github.com/davidjerleke/embla-carousel) 
- 
 is-hotkey (0.2.0). MIT Licensed: [Repo](git://github.com/ianstormtaylor/is-hotkey.git) 
  
 lucide-react (0.445.0). Copyright Eric Fennis -- ISC Licensed: [Repo](https://github.com/lucide-icons/lucide.git) 
- 
-next-themes (0.3.0). MIT Licensed: [Repo](https://github.com/pacocoursey/next-themes.git) 
  
 react (18.3.1). MIT Licensed: [Repo](https://github.com/facebook/react.git) 
  
@@ -131,8 +125,6 @@ sonner (1.5.0). Copyright Emil Kowalski <e@emilkowal.ski> -- MIT Licensed: [Repo
  
 tailwind-merge (2.5.2). Copyright Dany Castillo -- MIT Licensed: [Repo](https://github.com/dcastil/tailwind-merge.git) 
  
-tailwindcss-animate (1.0.7). Copyright Jamie Kyle <me@thejameskyle.com> -- MIT Licensed: [Repo](https://registry.npmjs.org/tailwindcss-animate/-/tailwindcss-animate-1.0.7.tgz) 
- 
 uuid (10.0.0). MIT Licensed: [Repo](https://github.com/uuidjs/uuid.git) 
  
 vite-plugin-mdx (3.6.0). MIT Licensed: [Repo](https://github.com/brillout/vite-plugin-mdx.git) 
@@ -147,5 +139,5 @@ Apache 2.0 - Shawn Gilroy, Louisiana State University
 
 ## Version
 
-Version 0.3.7
+Version 0.3.8
 

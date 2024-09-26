@@ -44,6 +44,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 
 ## Changelog
 
+- Version 0.3.8: Simplify and expand documentation
 - Version 0.3.7: Add in screenshots, edits based on reviews
 - Version 0.3.6: PWA Vite port, add initial icon set
 - Version 0.3.5: Add early archiving features, Bump to React 19
