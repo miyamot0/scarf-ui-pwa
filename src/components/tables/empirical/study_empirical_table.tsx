@@ -22,8 +22,7 @@ interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
 }
 
-// @ts-ignore
-export function StudyEmpiricalDataTable<TData, TValue>({ columns }: DataTableProps<StudyObject, TValue>) {
+export function StudyEmpiricalDataTable<TValue>({ columns }: DataTableProps<StudyObject, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
   const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({

@@ -2,8 +2,6 @@
   "name": "Single-case Assessment and Review Framework (SCARF-UI)",
   "short_name": "SCARF-UI",
   "description": "The SCARF-UI is a web-app that supports the systematic review, appriasal, codification of single-case experimental (SCED) study outcomes.",
-  "theme_color": "#F5F5F5",
-  "background_color": "#F5F5F5",
   "icons": [
     {
       "src": "/favicon.ico",

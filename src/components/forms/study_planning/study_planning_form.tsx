@@ -94,7 +94,7 @@ export function StudyPlanningForm({ readonly = false }: { readonly?: boolean }) 
             <FormField
               key={question.QuestionID}
               control={form.control}
-              // @ts-ignore
+              // @ts-expect-error - TS doesn't like the name prop on FieldValues
               name={question.QuestionID}
               render={({ field }) => (
                 <FormItem>

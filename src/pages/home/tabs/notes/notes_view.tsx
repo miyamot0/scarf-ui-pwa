@@ -24,7 +24,6 @@ import { GlobalStateType } from '@/questions/types/GlobalStateType';
 
 const initialValue = [
   {
-    // @ts-ignore
     type: 'paragraph',
     children: [
       {
@@ -32,13 +31,15 @@ const initialValue = [
       },
     ],
   },
-] satisfies Descendant[];
+] as unknown as Descendant[];
 
 export function NotesTabView({ readonly, state }: { readonly?: boolean; state?: GlobalStateType }) {
   const { context, dispatch } = useContext(AppStateContext);
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const renderElement = useCallback((props: any) => <NotesElement {...props} />, []);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const renderLeaf = useCallback((props: any) => <NotesLeaf {...props} />, []);
 
   const state_to_manage = readonly ? state! : context;
@@ -82,9 +83,10 @@ export function NotesTabView({ readonly, state }: { readonly?: boolean; state?: 
         readOnly={readonly}
         onKeyDown={(event) => {
           for (const hotkey in HOTKEYS) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             if (isHotkey(hotkey, event as any)) {
               event.preventDefault();
-              //@ts-ignore Pull by name
+              // @ts-expect-error - TS doesn't like the type of hotkey
               const mark = HOTKEYS[hotkey];
               toggleMark(editor, mark);
             }
