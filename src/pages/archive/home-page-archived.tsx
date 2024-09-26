@@ -13,18 +13,16 @@ import { EmpiricalTabView } from '../home/tabs/empirical/empirical_view';
 import { VisualsView } from '../home/tabs/visuals/visuals_view';
 import { NotesTabView } from '../home/tabs/notes/notes_view';
 
-import archive_1 from '../../assets/archives/Bilingual Communication Training Review_Primary_2024-7-19 (4).json';
-import archive_2 from '../../assets/archives/fbbcccbf-df50-40c2-b4eb-5ab171cdc69c.json';
 import { useLoaderData } from 'react-router-dom';
 import { DefaultStartingValue } from '@/types/app-state';
 import PageWrapper from '@/components/layout/page-wrapper';
 
+// eslint-disable-next-line react-refresh/only-export-components, @typescript-eslint/no-explicit-any
 export async function loader({ params }: any) {
   if (!params.id) return undefined;
 
-  const archived_files = [archive_1, archive_2];
-
-  return archived_files.find((f) => f.ID === params.id);
+  const response = await fetch(`/archives/${params.id}.json`);
+  return await response.json();
 }
 
 export default function HomePageArchived() {

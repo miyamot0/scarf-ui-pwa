@@ -6,7 +6,7 @@ import '@/styles/globals.css';
 import { InformationPage } from './pages/information/information-page';
 import { ReliabilityPage } from './pages/reliability/reliability-page';
 import { ARCHIVES_LINK, INFORMATION_LINK, RELIABILITY_LINK } from './components/layout/views/header';
-import HomePageArchiveListing, { loader as archiveListLoader } from './pages/archive/home-page-archive-list';
+import HomePageArchiveListing from './pages/archive/home-page-archive-list';
 import HomePageArchived, { loader as archivedLoader } from './pages/archive/home-page-archived';
 
 const router = createBrowserRouter(
@@ -15,7 +15,7 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path={INFORMATION_LINK} element={<InformationPage />} />
       <Route path={RELIABILITY_LINK} element={<ReliabilityPage />} />
-      <Route path={ARCHIVES_LINK} loader={archiveListLoader} element={<HomePageArchiveListing />} />
+      <Route path={ARCHIVES_LINK} element={<HomePageArchiveListing />} />
       <Route path={`${ARCHIVES_LINK}/:id`} loader={archivedLoader} element={<HomePageArchived />} />
     </Route>
   )

@@ -1,24 +1,22 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { SavedGlobalStateType } from '@/questions/types/GlobalStateType';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import archive_1 from '../../assets/archives/Bilingual Communication Training Review_Primary_2024-7-19 (4).json';
+import archive_1 from '../../assets/archives/ae189b72-7ae4-40ba-838c-4b6410233a02.json';
 import archive_2 from '../../assets/archives/fbbcccbf-df50-40c2-b4eb-5ab171cdc69c.json';
 import PageWrapper from '@/components/layout/page-wrapper';
 import { ARCHIVES_LINK } from '@/components/layout/views/header';
 
-export async function loader() {
-  const archived_files = [archive_1, archive_2].sort(
-    (a, b) => new Date(a.DateSaved).valueOf() - new Date(b.DateSaved).valueOf()
-  );
-
-  return archived_files;
-}
+const archived_files = [archive_1, archive_2]
+  .sort((a, b) => new Date(a.DateSaved).valueOf() - new Date(b.DateSaved).valueOf())
+  .map((data_record) => ({
+    ID: data_record.ID,
+    Author: data_record.Author,
+    Title: data_record.Title,
+    DateSaved: data_record.DateSaved,
+  }));
 
 export default function HomePageArchiveListing() {
-  const archived_files = useLoaderData() as SavedGlobalStateType[];
-
   return (
     <PageWrapper>
       <div className="flex flex-col gap-y-4 my-8">
