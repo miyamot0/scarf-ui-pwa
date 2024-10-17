@@ -146,7 +146,11 @@ export const Header = () => {
               <span>
                 The source code necessary to inspect, build, or otherwise extend the SCARF-UI web app is provided
                 publicly at{' '}
-                <Link className="text-blue-400 underline" to={'https://github.com/miyamot0/scarf-ui-pwa'}>
+                <Link
+                  className="text-blue-400 underline"
+                  to={'https://github.com/miyamot0/scarf-ui-pwa'}
+                  target="_blank"
+                >
                   https://github.com/miyamot0/scarf-ui-pwa
                 </Link>{' '}
                 under the permissive MIT license.
