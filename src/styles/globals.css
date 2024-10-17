@@ -76,12 +76,12 @@
 }
 
 .heading_level_1 {
-    @apply text-lg font-semibold underline;
+  @apply text-lg font-semibold underline;
 }
 
 .Spreadsheet__header,
 .Spreadsheet__cell {
-  @apply !text-foreground dark:!text-background;
+  @apply !text-foreground;
 }
 
 .Spreadsheet__table {
