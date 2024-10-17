@@ -46,8 +46,6 @@ export function AppStateContextProvider({ children }: { children: ReactNode }) {
         setAppContext(parsedSettings);
       }
     }
-
-    () => {};
   }, []);
 
   return (

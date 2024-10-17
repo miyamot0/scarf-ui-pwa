@@ -52,7 +52,7 @@ export function StudyInternalValidityForm({ study }: { study?: StudyObject }) {
 
     let t: keyof QuestionObjectHolder;
 
-    // @ts-ignore
+    // @ts-expect-error - TS is not able to infer the type of t
     for (t in values) {
       questions = questions.map((q) => {
         if (q.QuestionID === t) {
@@ -106,7 +106,7 @@ export function StudyInternalValidityForm({ study }: { study?: StudyObject }) {
             <FormField
               key={question.QuestionID}
               control={form.control}
-              // @ts-ignore
+              // @ts-expect-error - TS is not able to infer the type of t
               name={question.QuestionID}
               render={({ field }) => (
                 <FormItem>

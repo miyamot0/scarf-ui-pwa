@@ -62,6 +62,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         ...state,
         NeedSave: false,
       };
+
     case 'generate_random':
       return generateRandomStartState(state);
 
@@ -73,10 +74,10 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         StudyTitle: '',
         StudyJournal: '',
         StudyYear: -1,
-        InternalValidity: InternalValidityQuestionDefault,
-        ExternalValidity: ExternalValidityQuestionDefault,
-        Reporting: ReportingQuestionDefault,
-        Outcomes: OutcomesQuestionDefault,
+        InternalValidity: { ...InternalValidityQuestionDefault },
+        ExternalValidity: { ...ExternalValidityQuestionDefault },
+        Reporting: { ...ReportingQuestionDefault },
+        Outcomes: { ...OutcomesQuestionDefault },
         PublicationType: 'Unclassified',
       };
 
@@ -136,6 +137,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
       }
 
       return { ...new_state, NeedSave: true };
+
     case 'remove':
       new_state = {
         ...state,
@@ -148,6 +150,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
       }
 
       return { ...new_state, NeedSave: true };
+
     case 'update_display_state':
       new_state = {
         ...state,
@@ -157,6 +160,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
       if (state.AutoSave && state.ReadOnly !== true) SaveToLocalStorage(new_state);
 
       return new_state;
+
     case 'update_dialog_state':
       new_state = {
         ...state,
@@ -166,24 +170,28 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
       if (state.AutoSave && state.ReadOnly !== true) SaveToLocalStorage(new_state);
 
       return new_state;
+
     case 'update_study':
+      const updated_studies = state.Studies.map((item) =>
+        item.StudyID === action.payload.study_id ? action.payload.updatedData : item
+      );
+
       new_state = {
         ...state,
         DialogState: {
           dialog_type: undefined,
           study: undefined,
         },
-        Studies: state.Studies.map((item) =>
-          item.StudyID === action.payload.study_id ? { ...item, ...action.payload.updatedData } : item
-        ),
+        Studies: updated_studies,
       };
 
       if (state.AutoSave && state.ReadOnly !== true) {
         SaveToLocalStorage(new_state);
-        return new_state;
+        return { ...new_state };
       }
 
       return { ...new_state, NeedSave: true };
+
     case 'update_study_category':
       new_state = {
         ...state,

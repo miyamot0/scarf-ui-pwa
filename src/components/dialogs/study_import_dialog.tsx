@@ -25,6 +25,7 @@ const DEFAULT_DATA = [
 
 export function StudyImportDialog() {
   const { context, dispatch } = useContext(AppStateContext);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [data, setData] = useState<Matrix<CellBase<any>>>(DEFAULT_DATA);
 
   const { theme } = useTheme();
@@ -33,6 +34,7 @@ export function StudyImportDialog() {
   function onSubmit() {
     const studies: StudyObject[] = [];
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     data.forEach((row: (CellBase<any> | undefined)[]) => {
       if (!row) return;
 
@@ -62,12 +64,13 @@ export function StudyImportDialog() {
           StudyAuthors: StudyAuthors ?? '',
           StudyJournal: StudyJournal ?? '',
           StudyYear: StudyYear ? parseInt(StudyYear) : -1,
-          InternalValidity: InternalValidityQuestionDefault,
-          ExternalValidity: ExternalValidityQuestionDefault,
-          Reporting: ReportingQuestionDefault,
-          Outcomes: OutcomesQuestionDefault,
+          InternalValidity: { ...InternalValidityQuestionDefault },
+          ExternalValidity: { ...ExternalValidityQuestionDefault },
+          Reporting: { ...ReportingQuestionDefault },
+          Outcomes: { ...OutcomesQuestionDefault },
           PublicationType: 'Unclassified',
         } satisfies StudyObject);
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (e) {
         return;
       }

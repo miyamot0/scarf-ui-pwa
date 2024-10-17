@@ -89,6 +89,7 @@ const empirical_cols_4 = OutcomesQuestionDefault.Questions.map((question) => {
   };
 });
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const style_dynamic = (primary: any, reliability: any) => {
   if (!primary && !reliability) return <></>;
 
