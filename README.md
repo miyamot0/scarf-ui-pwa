@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/Version-0.3.9-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple) ![Static Badge](https://img.shields.io/badge/Coverage-0_Percent-orange)
+![Static Badge](https://img.shields.io/badge/Version-0.4.0-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple)
 
 # SCARF-UI (PWA)
 
@@ -50,6 +50,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 - Version 0.3.7: Add in screenshots, edits based on reviews
 - Version 0.3.8: Simplify and expand documentation
 - Version 0.3.9: Minor ui tweaks for visibility and navigation
+- Version 4.0.0: Bug fix build
 
 ## Referenced Works
 
@@ -137,5 +138,5 @@ Apache 2.0 - Shawn Gilroy, Louisiana State University
 
 ## Version
 
-Version 0.3.9
+Version 0.4.0
 
