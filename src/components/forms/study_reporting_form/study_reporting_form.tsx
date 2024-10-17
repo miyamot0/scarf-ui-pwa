@@ -37,11 +37,11 @@ export function StudyReportingForm({ study }: { study?: StudyObject }) {
   function onSubmit(values: z.infer<typeof StudyReportingSchema>) {
     if (!study) throw new Error('Study should not be undefined');
 
-    let questions = study.Reporting.Questions;
+    let questions = JSON.parse(JSON.stringify(study.Reporting.Questions)) as QuestionObjectHolder[];
 
     let t: keyof QuestionObjectHolder;
 
-    // @ts-ignore
+    // @ts-expect-error - TS is not able to infer the type of t
     for (t in values) {
       questions = questions.map((q) => {
         if (q.QuestionID === t) {
@@ -93,7 +93,7 @@ export function StudyReportingForm({ study }: { study?: StudyObject }) {
             <FormField
               key={question.QuestionID}
               control={form.control}
-              // @ts-ignore
+              // @ts-expect-error - TS is not able to infer the type of t
               name={question.QuestionID}
               render={({ field }) => (
                 <FormItem>
