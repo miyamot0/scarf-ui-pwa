@@ -4,16 +4,27 @@ import { study_columns } from '@/components/tables/dashboard/study_status_column
 import { StudyStatusDataTable } from '@/components/tables/dashboard/study_status_table';
 import { HeadingComponent } from '../instructions/views/heading_component';
 import { toast } from 'sonner';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AppStateContext } from '@/components/context/data-provider';
 import { GlobalStateType } from '@/questions/types/GlobalStateType';
 import { StudyStatusDataTableRO } from '@/components/tables/dashboard/study_status_tableRO';
+import { cn } from '@/lib/utils';
 
 export function StudiesView({ readonly, context }: { readonly?: boolean; context?: GlobalStateType }) {
   const { dispatch } = useContext(AppStateContext);
+  const [loaded, isLoaded] = useState(false);
+
+  useEffect(() => {
+    isLoaded(true);
+  }, []);
 
   return (
-    <div className="flex flex-col gap-y-4">
+    <div
+      className={cn('flex flex-col gap-y-4 transition-opacity', {
+        'opacity-100': loaded,
+        'opacity-0': !loaded,
+      })}
+    >
       {!readonly && (
         <>
           <HeadingComponent Text="Study Coding" />

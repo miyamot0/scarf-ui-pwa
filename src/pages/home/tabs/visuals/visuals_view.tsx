@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import {
@@ -27,6 +27,7 @@ import { HeatmapIV } from './views/heatmap_iv';
 import { HeatmapDV } from './views/heatmap_dv';
 import { HeatmapReporting } from './views/heatmap_reporting';
 import { GlobalStateType } from '@/questions/types/GlobalStateType';
+import { cn } from '@/lib/utils';
 
 // TODO: complete hack to suppress error
 const error = console.error;
@@ -41,6 +42,11 @@ export function VisualsView({ context }: { context: GlobalStateType }) {
   const [shape, setShape] = React.useState<SymbolType>('circle');
   const [size, setSize] = React.useState<number>(MarkerSizes[0].value);
   const [height, setHeight] = React.useState<number>(FigureHeights[0].value);
+  const [loaded, isLoaded] = useState(false);
+
+  useEffect(() => {
+    isLoaded(true);
+  }, []);
 
   const memoizedData = React.useMemo(() => context.Studies ?? [], [context.Studies]);
 
@@ -78,7 +84,12 @@ export function VisualsView({ context }: { context: GlobalStateType }) {
   });
 
   return (
-    <div className="flex flex-col gap-y-10">
+    <div
+      className={cn('flex flex-col gap-y-10 transition-opacity', {
+        'opacity-100': loaded,
+        'opacity-0': !loaded,
+      })}
+    >
       <div className="flex flex-col gap-y-4">
         <div className="flex flex-row justify-between mb-2">
           <div className="flex flex-col md:flex-row items-center md:space-x-2 space-y-2 md:space-y-0 my-auto">
