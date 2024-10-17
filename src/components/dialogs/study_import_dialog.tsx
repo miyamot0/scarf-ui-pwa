@@ -109,6 +109,8 @@ export function StudyImportDialog() {
             },
           },
         });
+
+        setData(DEFAULT_DATA);
       }}
       modal={true}
     >
