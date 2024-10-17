@@ -31,7 +31,7 @@ export const Header = () => {
           <NavigationMenuLink
             to="/"
             unstable_viewTransition
-            className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
+            className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow-md bg-white dark:bg-card')}
           >
             <SheetIcon size={20} />
             <span className="hidden md:flex">Data Entry</span>
@@ -40,7 +40,7 @@ export const Header = () => {
           <NavigationMenuLink
             to={INFORMATION_LINK}
             unstable_viewTransition
-            className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
+            className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow-md bg-white dark:bg-card')}
           >
             <ListChecksIcon size={20} />
             <span className="hidden md:flex">Instructions</span>
@@ -49,7 +49,7 @@ export const Header = () => {
           <NavigationMenuLink
             to={RELIABILITY_LINK}
             unstable_viewTransition
-            className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
+            className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow-md bg-white dark:bg-card')}
           >
             <UserSearchIcon size={20} />
             <span className="hidden md:flex">Reliability</span>
@@ -58,7 +58,7 @@ export const Header = () => {
           <NavigationMenuLink
             to={ARCHIVES_LINK}
             unstable_viewTransition
-            className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow')}
+            className={cn(navigationMenuTriggerStyle(), 'flex flex-row gap-x-2 border shadow-md bg-white dark:bg-card')}
           >
             <DatabaseIcon size={20} />
             <span className="hidden md:flex">Archives</span>
@@ -69,7 +69,7 @@ export const Header = () => {
       <div className="flex flex-row gap-2">
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline" size="icon">
+            <Button variant="outline" size="icon" className="shadow-md">
               <InfoIcon size={20} />
               <span className="sr-only">SCARF App Information</span>
             </Button>
@@ -102,7 +102,7 @@ export const Header = () => {
 
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline" size="icon">
+            <Button variant="outline" size="icon" className="shadow-md">
               <Code2Icon size={20} />
               <span className="sr-only">Application Licenses</span>
             </Button>
@@ -132,7 +132,7 @@ export const Header = () => {
 
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline" size="icon">
+            <Button variant="outline" size="icon" className="shadow-md">
               <GithubIcon size={20} />
               <span className="sr-only">SCARF Source Code</span>
             </Button>
