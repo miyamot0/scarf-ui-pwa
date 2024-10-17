@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import { VitePWA } from 'vite-plugin-pwa';
-
+import package_json from './package.json';
 import base_manifest from './public/manifest.json';
 
 const screenshots = base_manifest.screenshots as {
@@ -59,6 +59,10 @@ export default defineConfig({
   ],
   build: {
     manifest: true,
+  },
+  define: {
+    BUILD_DATE: JSON.stringify(new Date().toLocaleDateString('en-US')),
+    BUILD_VERSION: JSON.stringify(package_json.version),
   },
   assetsInclude: ['**/*.md'],
   resolve: {
