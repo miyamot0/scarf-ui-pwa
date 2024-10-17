@@ -114,15 +114,15 @@ export const study_columns: ColumnDef<StudyObject>[] = [
   },
   {
     accessorKey: 'StudyAuthors',
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Authors" />,
+    header: ({ column }) => <DataTableColumnHeader column={column} title="Authors" className="min-w-[200px]" />,
   },
   {
     accessorKey: 'StudyTitle',
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Title" />,
+    header: ({ column }) => <DataTableColumnHeader column={column} title="Title" className="min-w-[300px]" />,
   },
   {
     accessorKey: 'StudyJournal',
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Journal" />,
+    header: ({ column }) => <DataTableColumnHeader column={column} title="Journal" className="min-w-[300px]" />,
   },
   {
     accessorKey: 'StudyYear',
