@@ -25,7 +25,8 @@ interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
 }
 
-// @ts-ignore
+// @ts-expect-error - TS is not able to infer the type of TData
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function StudyStatusDataTable<TData, TValue>({ columns }: DataTableProps<StudyObject, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
@@ -71,7 +72,7 @@ export function StudyStatusDataTable<TData, TValue>({ columns }: DataTableProps<
             <Button
               variant="destructive"
               size="sm"
-              className="ml-auto hidden h-8 lg:flex "
+              className="ml-auto hidden h-8 lg:flex bg-red-500 hover:bg-red-600"
               onClick={() => {
                 const selected_ids = selected_rows.map((r) => r.original).map((r) => r.StudyID);
 
