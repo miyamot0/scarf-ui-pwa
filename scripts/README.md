@@ -50,7 +50,8 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 - Version 0.3.7: Add in screenshots, edits based on reviews
 - Version 0.3.8: Simplify and expand documentation
 - Version 0.3.9: Minor ui tweaks for visibility and navigation
-- Version 4.0.0: Bug fix build
+- Version 0.4.0: Bug fix
+- Version 0.4.1: Add in reviewer suggestions
 
 ## Referenced Works
 

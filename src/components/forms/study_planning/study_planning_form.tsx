@@ -85,6 +85,34 @@ export function StudyPlanningForm({ readonly = false }: { readonly?: boolean }) 
 
   return (
     <Form {...form}>
+      <div className="flex flex-col justify-between md:flex-row md:items-center">
+        <h1 className="text-xl font-semibold">{'Review Planning'}</h1>
+        <Button
+          size={'sm'}
+          variant={'outline'}
+          onClick={() => {
+            Object.keys(form.getValues()).forEach((key) => {
+              const question = context.ReviewPlans.Questions.find((q) => q.QuestionID === key);
+
+              if (!question) throw new Error('Question not found in context.');
+
+              form.setValue(key as keyof z.infer<typeof StudyDetailsSchema>, 'SCARF Planning Skipped');
+            });
+
+            form.handleSubmit(onSubmit)();
+          }}
+        >
+          Skip Planning
+        </Button>
+      </div>
+      <p>
+        The purpose of this tab is for researchers to identify the purpose of their review, and to establish criteria
+        for their review that allows them to take their specific contexts into consideration. For example, a researcher
+        assessing interventions for severe challenging behavior might find fewer data points per condition adequate, due
+        to ethical or safety reasons, while a researcher assessing interventions fo academic skills might require at
+        least five data points per condition.
+      </p>
+      <hr />
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         {context.ReviewPlans.Questions.map((question) => {
           const questionStem = question.QuestionStem;
