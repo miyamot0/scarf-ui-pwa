@@ -68,7 +68,7 @@ export default function HomePageArchived() {
           </CardHeader>
           <CardContent>
             <Tabs value={state.DisplayState} className={cn('w-full flex flex-col gap-y-4')}>
-              <TabsList className="w-full flex flex-row border">
+              <TabsList className="w-full flex flex-wrap md:flex-nowrap flex-row border h-fit">
                 <TabsTrigger
                   value="planning"
                   className="w-full"
