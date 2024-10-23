@@ -12,7 +12,7 @@ type Props = {
 export default function PageWrapper({ children, className }: Props) {
   return (
     <main
-      className={cn('flex min-h-screen flex-col items-center w-full py-4 mx-2 max-w-screen-xl self-center', className)}
+      className={cn('flex min-h-screen flex-col items-center w-full py-4 mx-2 max-w-screen-2xl self-center', className)}
     >
       <Header />
 

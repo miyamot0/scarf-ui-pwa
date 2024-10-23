@@ -26,7 +26,7 @@ const DEFAULT_DATA = [
 export function StudyImportDialog() {
   const { context, dispatch } = useContext(AppStateContext);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [data, setData] = useState<Matrix<CellBase<any>>>(DEFAULT_DATA);
+  const [data, setData] = useState<undefined | Matrix<CellBase<any>>>(undefined);
 
   const { theme } = useTheme();
   const isDark = theme === 'dark';
@@ -35,7 +35,7 @@ export function StudyImportDialog() {
     const studies: StudyObject[] = [];
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    data.forEach((row: (CellBase<any> | undefined)[]) => {
+    data?.forEach((row: (CellBase<any> | undefined)[]) => {
       if (!row) return;
 
       try {
@@ -93,6 +93,8 @@ export function StudyImportDialog() {
         dismissible: true,
         description: 'Review the imported data set to ensure correct import.',
       });
+
+      setData(undefined);
     }
   }
 
@@ -110,7 +112,7 @@ export function StudyImportDialog() {
           },
         });
 
-        setData(DEFAULT_DATA);
+        setData(undefined);
       }}
       modal={true}
     >
@@ -121,9 +123,15 @@ export function StudyImportDialog() {
             <DialogDescription>You may paste in spreadsheet data to bulk import studies.</DialogDescription>
           </DialogHeader>
 
+          <p>
+            This widget will allow for a direct 'copy-paste' of data from a spreadsheet. Additional rows will be added
+            as necessary, based on the data pasted. Rows with missing data will not be inserted (i.e., insert some
+            temporary value into relevant empty cells).
+          </p>
+
           <Spreadsheet
             darkMode={isDark}
-            data={data}
+            data={data ?? DEFAULT_DATA}
             onChange={setData}
             columnLabels={STUDY_LABELS}
             hideRowIndicators={false}
