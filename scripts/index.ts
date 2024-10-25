@@ -47,7 +47,11 @@ function write_md(content: string) {
 }
 
 function generate_manifest_archive() {
-  const files_json = fs.readdirSync('./public/archives', 'utf-8');
+  const files_json = fs
+    .readdirSync('./public/archives', {
+      encoding: 'utf8',
+    })
+    .filter((file) => file.endsWith('.json'));
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const archive_vector: any[] = [];
