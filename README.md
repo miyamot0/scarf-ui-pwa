@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/Version-0.4.1-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple)
+![Static Badge](https://img.shields.io/badge/Version-0.4.2-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple)
 
 # SCARF-UI (PWA)
 
@@ -52,6 +52,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 - Version 0.3.9: Minor ui tweaks for visibility and navigation
 - Version 0.4.0: Bug fix
 - Version 0.4.1: Peer review edits (planning, import, minor UI edits)
+- Version 0.4.2: Add in remaining video
 
 ## Referenced Works
 
@@ -111,6 +112,8 @@ react-spreadsheet (0.9.5). Copyright Iddan Aaronsohn <mail@aniddan.com> (https:/
  
 react-use-pwa-install (1.0.1). Copyright Filip Chalupa chalupa.filip@gmail.com https://www.npmjs.com/~onset -- ISC Licensed: [Repo](https://github.com/FilipChalupa/react-use-pwa-install.git) 
  
+react-youtube (10.1.0). Copyright Tjalling Tolle <tjallingt@gmail.com> -- MIT Licensed: [Repo](ssh://git@github.com/tjallingt/react-youtube.git) 
+ 
 recharts (2.12.7). Copyright recharts group -- MIT Licensed: [Repo](https://github.com/recharts/recharts.git) 
  
 scheduler (0.23.2). MIT Licensed: [Repo](https://github.com/facebook/react.git) 
@@ -139,5 +142,5 @@ Apache 2.0 - Shawn Gilroy, Louisiana State University
 
 ## Version
 
-Version 0.4.1
+Version 0.4.2
 

@@ -3,6 +3,7 @@ import { Hero } from './views/hero';
 import PageWrapper from '@/components/layout/page-wrapper';
 import { DocumentationObjects } from '@/lib/docs';
 import { MdViewer } from '@/components/helpers/md-viewer';
+import { YouTubeElement } from '@/components/ui/youtube-element';
 
 export function InformationPage() {
   const entry = DocumentationObjects[0];
@@ -20,6 +21,7 @@ export function InformationPage() {
           </CardHeader>
           <CardContent className="prose dark:prose-invert !max-w-none">
             <MdViewer source={entry.value} />
+            <YouTubeElement />
           </CardContent>
         </Card>
       </div>

@@ -1,5 +1,5 @@
 {
-  "version": "0.4.1",
+  "version": "0.4.2",
   "name": "scarf-ui-pwa",
   "description": "SCARF-UI-PWA is a PWA to support research synthesis featuring SCEDs",
   "homepage": "https://www.smallnstats.com",
@@ -68,6 +68,7 @@
     "react-router-dom": "^6.26.2",
     "react-spreadsheet": "^0.9.5",
     "react-use-pwa-install": "^1.0.1",
+    "react-youtube": "^10.1.0",
     "recharts": "^2.12.7",
     "scheduler": "^0.23.2",
     "slate": "^0.103.0",
