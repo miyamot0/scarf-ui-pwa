@@ -1,5 +1,5 @@
 ---
-title: Planning Section for SCARF-UI
+title: Planning for the SCARF-UI
 date: 09/26/2024
 author: 'Shawn Gilroy'
 index: 1
