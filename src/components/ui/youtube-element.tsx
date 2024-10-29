@@ -13,12 +13,8 @@ export class YouTubeElement extends React.Component {
     };
 
     return (
-      <div className="flex flex-col">
-        <h4 className="pb-4">Video Overview of SCARF-UI</h4>
-
-        <div className="flex flex-row justify-center">
-          <YouTube videoId="TmfcrQSykFo" opts={opts} onReady={this._onReady} />
-        </div>
+      <div className="flex flex-col w-full items-center justify-center">
+        <YouTube videoId="TmfcrQSykFo" opts={opts} onReady={this._onReady} />
       </div>
     );
   }
