@@ -122,8 +122,8 @@ export function ReviewDetailsForm() {
           render={({ field }) => (
             <FormItem className="flex flex-row items-center justify-between rounded-lg ">
               <div className="space-y-0.5">
-                <FormLabel className="text-base">Hide Maintenance Fields</FormLabel>
-                <FormDescription>Hide questions related to Maintenance</FormDescription>
+                <FormLabel className="text-base">Hide Maintenance Visuals</FormLabel>
+                <FormDescription>Hide visuals related to Maintenance</FormDescription>
               </div>
               <FormControl>
                 <Switch checked={field.value} onCheckedChange={field.onChange} />
@@ -138,8 +138,8 @@ export function ReviewDetailsForm() {
           render={({ field }) => (
             <FormItem className="flex flex-row items-center justify-between rounded-lg ">
               <div className="space-y-0.5">
-                <FormLabel className="text-base">Hide Generalization Fields</FormLabel>
-                <FormDescription>Hide questions related to Generalization</FormDescription>
+                <FormLabel className="text-base">Hide Generalization Visuals</FormLabel>
+                <FormDescription>Hide visuals related to Generalization</FormDescription>
               </div>
               <FormControl>
                 <Switch checked={field.value} onCheckedChange={field.onChange} />

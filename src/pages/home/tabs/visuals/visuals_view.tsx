@@ -156,9 +156,13 @@ export function VisualsView({ context }: { context: GlobalStateType }) {
 
         <VisualFunctionalRelationGivenIV Data={recordsToVisualize} shape={shape} size={size} height={height} />
 
-        <MaintenanceGivenWindow Data={recordsToVisualize} shape={shape} size={size} height={height} />
+        {context.HideMaintenance !== true && (
+          <MaintenanceGivenWindow Data={recordsToVisualize} shape={shape} size={size} height={height} />
+        )}
 
-        <GeneralizationGivenWindow Data={recordsToVisualize} shape={shape} size={size} height={height} />
+        {context.HideGeneralization !== true && (
+          <GeneralizationGivenWindow Data={recordsToVisualize} shape={shape} size={size} height={height} />
+        )}
       </div>
 
       <HeatmapIV {...context} />
