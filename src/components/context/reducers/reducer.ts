@@ -206,6 +206,7 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
       }
 
       return { ...new_state, NeedSave: true };
+
     case 'update_review':
       new_state = {
         ...state,
@@ -216,6 +217,8 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
         ReviewName: action.payload.review_name,
         ReviewType: action.payload.review_type,
         AutoSave: action.payload.auto_save,
+        HideMaintenance: action.payload.hide_maintenance,
+        HideGeneralization: action.payload.hide_generalization,
       };
 
       if (state.AutoSave && state.ReadOnly !== true) {

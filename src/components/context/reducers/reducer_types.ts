@@ -41,6 +41,8 @@ export type DatabaseAction =
         review_name: string;
         review_type: ReviewTypes;
         auto_save: boolean;
+        hide_maintenance: boolean;
+        hide_generalization: boolean;
       };
     }
   | {
