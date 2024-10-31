@@ -54,6 +54,7 @@ export function ButtonBar({
         type="file"
         ref={refFileInput}
         className="hidden"
+        accept=".json"
         onChange={(e) => {
           if (!e.target.files) return;
 
