@@ -53,6 +53,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 - Version 0.4.0: Bug fix
 - Version 0.4.1: Peer review edits (planning, import, minor UI edits)
 - Version 0.4.2: Add in remaining video
+- Version 0.4.3: Expand documentation section
 
 ## Referenced Works
 

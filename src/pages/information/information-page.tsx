@@ -13,7 +13,7 @@ const ExpandedDocumentationObjects = [
   {
     matter: {
       index: DocumentationObjects.length,
-      title: 'Brief Video Guide',
+      title: 'Video Tutorial for SCARF-UI',
       description: 'Links and resources for further learning',
     },
     value: '',
@@ -22,6 +22,15 @@ const ExpandedDocumentationObjects = [
 
 export function InformationPage() {
   const [currentEntry, setCurrentEntry] = useState(ExpandedDocumentationObjects[0]);
+  const [showButton, setShowButton] = useState(false);
+
+  const prevEntry = ExpandedDocumentationObjects.find((doc) => doc.matter.index === currentEntry.matter.index - 1);
+  const nextEntry = ExpandedDocumentationObjects.find((doc) => doc.matter.index === currentEntry.matter.index + 1);
+
+  const updateButtonUI = (display: boolean) => {
+    window.scrollTo(0, 0);
+    setShowButton(display);
+  };
 
   return (
     <PageWrapper>
@@ -36,12 +45,15 @@ export function InformationPage() {
             <div className="flex flex-col min-w-[300px] gap-4">
               {ExpandedDocumentationObjects.map((doc) => (
                 <Button
-                  variant={'outline'}
-                  className={cn('shadow transition-shadow', {
-                    'shadow-lg underline': currentEntry.matter.index === doc.matter.index,
+                  variant={'ghost'}
+                  className={cn('', {
+                    'underline bg-accent border': currentEntry.matter.index === doc.matter.index,
                   })}
                   key={doc.matter.index}
-                  onClick={() => setCurrentEntry(doc)}
+                  onClick={() => {
+                    updateButtonUI(false);
+                    setCurrentEntry(doc);
+                  }}
                 >
                   {doc.matter.title}
                 </Button>
@@ -49,9 +61,30 @@ export function InformationPage() {
             </div>
             <div className="prose dark:prose-invert !max-w-none grow">
               {currentEntry.matter.index === DocumentationObjects.length ? (
-                <YouTubeElement />
+                <YouTubeElement callback={updateButtonUI} />
               ) : (
-                <MdViewer source={currentEntry.value} />
+                <MdViewer source={currentEntry.value} callback={updateButtonUI} />
+              )}
+
+              {showButton && (
+                <div className="flex flex-row justify-between pt-4">
+                  <Button
+                    onClick={() => {
+                      updateButtonUI(false);
+                      setCurrentEntry(prevEntry ?? currentEntry);
+                    }}
+                  >
+                    Read Previous
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      updateButtonUI(false);
+                      setCurrentEntry(nextEntry ?? currentEntry);
+                    }}
+                  >
+                    Read Next
+                  </Button>
+                </div>
               )}
             </div>
           </CardContent>

@@ -23,20 +23,26 @@ function useMDXComponents(components: MDXComponents): MDXComponents {
 
 const runtime = { jsx, jsxs, Fragment, useMDXComponents } as Runtime;
 
-export const MdViewer: FC<{ source?: string }> = ({ source = '' }) => {
+export const MdViewer: FC<{ source?: string; callback?: (cb: boolean) => void }> = ({ source = '', callback }) => {
   const [MdxContent, setMdxContent] = useState<ReactMDXContent>(() => () => null);
   const [displayed, setDisplayed] = useState(false);
 
   useEffect(() => {
-    setDisplayed(false);
+    const updateUI = (display: boolean) => {
+      setDisplayed(display);
+
+      if (callback) {
+        callback(display);
+      }
+    };
 
     evaluate(source, runtime).then((r) => {
       setTimeout(function () {
         setMdxContent(() => r.default);
-        setDisplayed(true);
+        updateUI(true);
       }, 150);
     });
-  }, [source]);
+  }, [source, callback]);
 
   return (
     <div
