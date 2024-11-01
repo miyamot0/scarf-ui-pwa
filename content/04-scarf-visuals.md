@@ -17,13 +17,13 @@ The first figure summarizes two dimensions relevant to SCED research: The size/d
 
 This is likely the most common and important figure for most SCED reviews, as it provides a visual summary of the core outcomes of interest (i.e., the size/direction of intervention effects) and the quality of the studies that have been reviewed. This figure is particularly useful for identifying patterns in the data and for assessing the overall strength of the evidence base.
 
-#### Figure B: Outcome Maintenance and Degree of Follow-up
+### Figure B: Outcome Maintenance and Degree of Follow-up
 
 This figure illustrates information related to the maintenance of primary study outcomes. It consists of plotting the size/direction of maintained outcomes against the size of the follow-up window. Generally, it is expected to have maintenance effects consistent with effects while in treatment when the latency between intervention and follow-up is brief (e.g., immediately following conclusion of the study). Variability in this figure may suggest that intervention effects are not particularly durable and/or the literature may not be established enough to draw clear inferences regarding long-term benefits.
 
 This is a useful, but perhaps less common type of visual to include in a review. Should reviewers not wish to explore these figures, they can be disabled in the settings area of the SCARF-UI app.
 
-#### Figure C: Outcome Generalization and Generalization Measurement
+### Figure C: Outcome Generalization and Generalization Measurement
 
 The final figure depicts the degree of generalization observed in respective studies against the rigor/breadth of generalization explorted. This figure is useful for assessing the degree to which the literature has explored the generalization of effects and the rigor with which generalization has been explored. A high degree of variability in this figure may suggest that the certain approaches may not produce outcomes that have consistently good generality (i.e., that outcomes do not clearly extend beyond the teaching/intervention context).
 
