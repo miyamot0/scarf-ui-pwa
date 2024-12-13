@@ -1,5 +1,5 @@
 import { StudyObject } from '@/questions/types/QuestionTypes';
-import { Edit } from 'lucide-react';
+import { CopyIcon, Edit, FileWarning } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -23,7 +23,7 @@ const StatusHighlight = ({ status, text }: { status: 'complete' | 'incomplete'; 
   if (status === 'complete') {
     return (
       <>
-        <span className="w-2 h-2 mr-2 bg-green-500 rounded-full"></span>
+        <span className="w-4 h-4 mr-2 bg-green-500 rounded-full"></span>
         {text}
       </>
     );
@@ -31,14 +31,14 @@ const StatusHighlight = ({ status, text }: { status: 'complete' | 'incomplete'; 
 
   return (
     <>
-      <span className="w-2 h-2 mr-2 bg-gray-500 rounded-full"></span>
+      <span className="w-4 h-4 mr-2 bg-gray-500 rounded-full"></span>
       {text}
     </>
   );
 };
 
 export function ActionCell({ Study }: { Study: StudyObject }) {
-  const { dispatch } = useContext(AppStateContext);
+  const { dispatch, context } = useContext(AppStateContext);
 
   return (
     <DropdownMenu>
@@ -50,7 +50,9 @@ export function ActionCell({ Study }: { Study: StudyObject }) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuLabel>Edit Record</DropdownMenuLabel>
+        <DropdownMenuLabel className="flex flex-row gap-2 items-center">
+          <Edit className="w-4 h-4" /> Edit Record
+        </DropdownMenuLabel>
         <DropdownMenuSeparator />
 
         <DropdownMenuItem
@@ -231,7 +233,58 @@ export function ActionCell({ Study }: { Study: StudyObject }) {
             });
           }}
         >
+          <CopyIcon className="w-4 h-4 mr-2" />
           Duplicate Record
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem
+          onClick={() => {
+            const confirm = window.confirm(
+              'Do you understand the consequences of overriding the ID and wish to continue?'
+            );
+
+            if (!confirm) return;
+
+            const prompt = window.prompt('Please enter the new Study ID:', Study.StudyID);
+
+            if (!prompt || prompt.length < 4) {
+              toast.warning('Error: Cannot update ID', {
+                description: 'The ID provided must be a unique string of at least 4 characters.',
+                duration: 5000,
+                dismissible: true,
+              });
+
+              return;
+            }
+
+            const is_already_present = context.Studies.find((item) => item.StudyID === prompt);
+
+            if (is_already_present) {
+              toast.warning('Error: Cannot update ID', {
+                description: 'The ID provided is already in use and must be unique.',
+                duration: 5000,
+                dismissible: true,
+              });
+
+              return;
+            }
+
+            const new_study = { ...Study, StudyID: prompt } satisfies StudyObject;
+
+            dispatch({
+              type: 'overwrite_study_id',
+              payload: { study_id: Study.StudyID, updatedData: new_study },
+            });
+
+            toast('Study ID has been renamed', {
+              description: 'See the main table to confirm changes.',
+              duration: 2000,
+              dismissible: true,
+            });
+          }}
+        >
+          <FileWarning className="w-4 h-4 mr-2" />
+          Override ID
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

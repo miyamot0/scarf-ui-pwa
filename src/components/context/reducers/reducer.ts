@@ -138,6 +138,28 @@ export const database_reducer = (state: GlobalStateType, action: DatabaseAction)
 
       return { ...new_state, NeedSave: true };
 
+    case 'overwrite_study_id':
+      const filtered_studies = state.Studies.filter((item) => item.StudyID !== action.payload.study_id);
+      const study_to_overwrite = state.Studies.find((item) => item.StudyID === action.payload.study_id);
+
+      if (!study_to_overwrite) throw new Error(`Study with ID ${action.payload.study_id} not found for overwrite`);
+
+      new_state = {
+        ...state,
+        DialogState: {
+          dialog_type: undefined,
+          study: undefined,
+        },
+        Studies: [...filtered_studies, action.payload.updatedData],
+      };
+
+      if (state.AutoSave && state.ReadOnly !== true) {
+        SaveToLocalStorage(new_state);
+        return new_state;
+      }
+
+      return { ...new_state, NeedSave: true };
+
     case 'remove':
       new_state = {
         ...state,

@@ -54,6 +54,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 - Version 0.4.1: Peer review edits (planning, import, minor UI edits)
 - Version 0.4.2: Add in remaining video
 - Version 0.4.3: Expand documentation section
+- Version 0.4.4: Add in ability to (dangerously) overwrite IDs (for goof ups)
 
 ## Referenced Works
 
