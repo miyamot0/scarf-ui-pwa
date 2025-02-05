@@ -1,25 +1,35 @@
 ---
-title: Information Overview
+title: Overview of SCARF-UI
 date: 09/26/2024
 author: 'Shawn Gilroy'
 index: 0
 ---
 
-## Overview of SCARF-UI Program
+## Overview of SCARF-UI Program and Support
 
-This section is intended to provide an initial starting point for those interested in using the SCARF-UI for their research. This guide is not intended to provide a comprehensive training in all matters related to SCD research synthesis and instead focuses on _intended use_ for the SCARF-UI tool. The information provided here is intended to be a high-level overview of the SCARF-UI program and its core functionalities. For more detailed information, please refer to the SCARF-UI documentation or contact the SCARF-UI development team.
+This section is intended to provide an initial starting point for those interested in using the SCARF-UI for their research.
+
+This guide is not intended to provide a comprehensive training in all matters related to SCD research synthesis and instead focuses on _intended use_ for the SCARF-UI tool. The information provided here is intended to be a high-level overview of the SCARF-UI program and its core functionalities.
+
+For questions related to the SCARF or specific training on SCARF, we recommend fully reviewing the SCARF-UI documentation or reaching out to the developers of the approach ([jennifer.ledford@vanderbilt.edu](mailto:jennifer.ledford@vanderbilt.edu)).
+
+For more support related to program errors (e.g., crashes), you may contact the SCARF-UI development team ([sgilroy1@lsu.edu](mailto:sgilroy1@lsu.edu)).
 
 ### Relevant Sections of Application
 
-The SCARF-UI has three core sections (i.e., Pages) that each provide information and functionality specific to SCARF. These include the _Data Entry_ section, the _Instructions_ section, the _Reliability_ section, and the _Archives_ section. Not all sections are relevant to conducting research, but are generally useful in working within the broader framework. Each section is described in more detail below.
+The SCARF-UI has three core sections (i.e., "pages") that each provide information and functionality specific to SCARF. These include the _Data Entry_ section, the _Instructions_ section, the _Reliability_ section, and the _Archives_ section. Not all of these sections are relevant to conducting novel research; however, they each contribute to working within the broader framework.
+
+Each section is described in more detail below.
 
 #### Data Entry Section
 
-The Data Entry section is the most relevant and functional part of the SCARF-UI. In general, all data that can be entered into the SCARF-UI will be entered, updated, managed, and/or exported from this page. It is most likely to be to page where active users spend the majority of their time. The Data Entry section is where users can input data, view data, and manage data. It is the primary interface for interacting with the SCARF-UI and is essential for conducting research.
+The Data Entry section is the most relevant and functional part of the SCARF-UI. In general, all data that can be entered into the SCARF-UI will be entered, updated, managed, and/or exported from this page. It is most likely to be to page where active users spend the majority of their time.
+
+The Data Entry section is where users can input data, view data, and manage data. It is the primary interface for interacting with the SCARF-UI and is essential for conducting research. It is on this page where users will import/export data, code respective studies, and manage the coding process. It is also where users can view and analyze data, making it a central hub for research activities.
 
 #### Instructions Section
 
-The Instructions section provides guidance on how to use the SCARF-UI effectively. It includes step-by-step instructions, tips, and best practices for data entry and management. This section is essential for new users to familiarize themselves with the tool. Additionally, it may contain links to external resources for further learning as well as guidance for more advanced practices (e.g., exporting SCARF data to be visualized in another tool).
+The Instructions section provides guidance on how to use the SCARF-UI effectively. It includes step-by-step instructions, tips, and some best practices for data entry and management. **This section is essential for new users to familiarize themselves with the tool**. Additionally, it may contain links to external resources for further learning as well as guidance for more advanced practices (e.g., exporting SCARF data to be visualized in another tool).
 
 Information in the Instructions section is intended to help users navigate the SCARF-UI and make the most of its features. It is a valuable resource for researchers who need assistance with using the tool effectively. Various topics and subtopics are covered in the Instructions section, including data entry, data management, data visualization, and data export.
 
