@@ -19,7 +19,7 @@
   "Category": "Outcomes",
   "QuestionID": "Outcomes_3",
   "QuestionStem": "If there is a criterion or ideal, was it met?",
-  "QuestionInstruction": "For designs with multiple potential responses (e.g., multiple baseline across participants, multiple probe across behaviors), select \"yes\" if criteria were met for a majority (more than half) of potential demonstrations or specify how you determined whether criterion was met in the colum to the right and report this in your written reports.",
+  "QuestionInstruction": "For designs with multiple potential responses (e.g., multiple baseline across participants, multiple probe across behaviors), select \"yes\" if criteria were met for a majority (more than half) of potential demonstrations or specify how you determined whether criterion was met in the column to the right and report this in your written reports.",
   "QuestionType": "YesNoNotApplicable",
   "Locale": "en-us"
  },
@@ -27,7 +27,7 @@
   "Category": "Outcomes",
   "QuestionID": "Outcomes_4",
   "QuestionStem": "For this variable, how would you characterize the change between conditions, using visual analysis?",
-  "QuestionInstruction": "Countertherapeutic = Changes in this behavior were in a direction that suggests worsening (e.g., increased challenging beahvior, decreased engagement) for most or all potential demonstrations. Null = There were no consistent changes in this behavior, suggesting no impact of intervention on behavior occurrence for most or all potential demonstrations. Inconsistent = Some null or countertherapeutic impacts occurred, with some weak or strong effects. Weak = No null or countertherapeutic effects, but at least one effect was \"weak,\" including changes that are unexpectedly delayed, small with overlapping data between conditions, or variable with overlapping data between conditions. Strong = Therapeutic effects occurred for all potential demonstrations. See design-specific examples on \"Visual Analysis Examples\" tab. Inconsistent is NOT APPLICABLE for ATD/AATD.",
+  "QuestionInstruction": "Countertherapeutic = Changes in this behavior were in a direction that suggests worsening (e.g., increased challenging behavior, decreased engagement) for most or all potential demonstrations. Null = There were no consistent changes in this behavior, suggesting no impact of intervention on behavior occurrence for most or all potential demonstrations. Inconsistent = Some null or countertherapeutic impacts occurred, with some weak or strong effects. Weak = No null or countertherapeutic effects, but at least one effect was \"weak,\" including changes that are unexpectedly delayed, small with overlapping data between conditions, or variable with overlapping data between conditions. Strong = Therapeutic effects occurred for all potential demonstrations. See design-specific examples on \"Visual Analysis Examples\" tab. Inconsistent is NOT APPLICABLE for ATD/AATD.",
   "QuestionType": "ConditionChangeCharacterization",
   "Locale": "en-us"
  },

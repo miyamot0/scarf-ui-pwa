@@ -14,7 +14,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -23,7 +23,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -32,7 +32,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -41,7 +41,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -50,7 +50,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -59,7 +59,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -68,7 +68,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -77,7 +77,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -86,7 +86,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -95,7 +95,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -104,7 +104,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -113,7 +113,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -122,7 +122,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -131,7 +131,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -140,7 +140,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -149,7 +149,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -158,16 +158,16 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
         "QuestionID": "Plan_Reporting_12",
-        "QuestionStem": "What implementer demographic characteristics must authors report to recive FULL or PARTIAL credit for adequate reporting? For example, for FULL credit, you might require reporting of gender, age range, and race/ethnicity. If one but not all are reported, you might report PARTIAL.",
+        "QuestionStem": "What implementer demographic characteristics must authors report to receive FULL or PARTIAL credit for adequate reporting? For example, for FULL credit, you might require reporting of gender, age range, and race/ethnicity. If one but not all are reported, you might report PARTIAL.",
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -176,7 +176,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -185,7 +185,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -194,7 +194,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -203,7 +203,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -212,7 +212,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -221,7 +221,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -230,7 +230,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       },
       {
         "Category": "Planning",
@@ -239,7 +239,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": ""
       }
     ]
   },

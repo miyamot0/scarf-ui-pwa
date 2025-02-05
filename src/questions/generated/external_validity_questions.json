@@ -59,7 +59,7 @@
   "Category": "Generality & Boundedness",
   "QuestionID": "Generality_Boundedness_3",
   "QuestionStem": "Is implementation by a relevant endogenous implementer applicable to your research question (e.g., implementation by teachers rather than researchers)?  If \"No\", report N/A for the next row.",
-  "QuestionInstruction": "Endogenous = typically present in the participant's typical environments. Identify specifically what implementers are of interest according to your research quesionts (e.g., teachers, caregivers, therapists).",
+  "QuestionInstruction": "Endogenous = typically present in the participant's typical environments. Identify specifically what implementers are of interest according to your research questions (e.g., teachers, caregivers, therapists).",
   "QuestionType": "YesNo",
   "Locale": "en-us"
  },
