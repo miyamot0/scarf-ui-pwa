@@ -14,6 +14,7 @@ import {
 import { toast } from 'sonner';
 import { AppStateContext } from '../context/data-provider';
 import { useTheme } from '../ui/theme-provider';
+import { Link } from 'react-router-dom';
 
 const STUDY_LABELS = ['Tag', 'Authors', 'Title', 'Journal', 'Year'];
 
@@ -126,10 +127,20 @@ export function StudyImportDialog() {
           <p>
             This widget will allow for a direct 'copy-paste' of data from a spreadsheet. Additional rows will be added
             as necessary, based on the data pasted. Rows with missing data will not be inserted (i.e., insert some
-            temporary value into relevant empty cells).
+            temporary value into relevant empty cells; see example{' '}
+            <Link
+              target="_blank"
+              to={'/example.csv'}
+              aria-label="Link to Example Spreadsheet"
+              className="text-blue-600 hover:text-blue-500"
+            >
+              here
+            </Link>
+            ).
           </p>
 
           <Spreadsheet
+            className="[&>table]:w-full"
             darkMode={isDark}
             data={data ?? DEFAULT_DATA}
             onChange={setData}

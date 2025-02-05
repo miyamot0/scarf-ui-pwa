@@ -42,6 +42,7 @@ export default function PageWrapper({ children, className }: Props) {
           <Link
             target="_blank"
             to={'https://ebip.vkcsites.org/scarfv2/'}
+            aria-label="Link to Original SCARF Website"
             className="text-blue-600 hover:text-blue-500 underline"
           >
             here
