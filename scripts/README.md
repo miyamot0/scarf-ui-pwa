@@ -22,7 +22,7 @@ The final figure provided illustrates the degree to which outcomes generalize to
 
 ## Using/Accessing the SCARF-UI Tool
 
-The tool provided here is hosted freely at [https://scarfui.smallnstats.com/](https://scarfui.smallnstats.com) and is available for public use in research. However, we note that the tool is presently **under evaluation** at this time and is subject to minor changes as the instrument is refined.
+The tool provided here is hosted freely at [https://scarf.smallnstats.com/](https://scarf.smallnstats.com) and is available for public use in research. However, we note that the tool is presently **under evaluation** at this time and is subject to minor changes as the instrument is refined.
 
 The tool **does not save any information remotely** and all information stays on the local machine of the user. However, users have the option to import/export their data and disseminate those data as they wish (e.g., for reliability checks, archiving).
 
