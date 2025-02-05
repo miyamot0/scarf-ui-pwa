@@ -30,6 +30,8 @@ export const DefaultStartingValue: GlobalStateType = {
   Loaded: undefined,
   NeedSave: false,
   ReadOnly: false,
+  HideGeneralization: false,
+  HideMaintenance: false,
 };
 
 export const DefaultStartingValueExpanded = {

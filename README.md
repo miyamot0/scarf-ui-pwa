@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/Version-0.4.2-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple)
+![Static Badge](https://img.shields.io/badge/Version-0.4.5-blue) ![Static Badge](https://img.shields.io/badge/License-Apache_2.0-purple)
 
 # SCARF-UI (PWA)
 
@@ -22,7 +22,7 @@ The final figure provided illustrates the degree to which outcomes generalize to
 
 ## Using/Accessing the SCARF-UI Tool
 
-The tool provided here is hosted freely at [https://scarfui.smallnstats.com/](https://scarfui.smallnstats.com) and is available for public use in research. However, we note that the tool is presently **under evaluation** at this time and is subject to minor changes as the instrument is refined.
+The tool provided here is hosted freely at [https://scarf.smallnstats.com/](https://scarf.smallnstats.com) and is available for public use in research. However, we note that the tool is presently **under evaluation** at this time and is subject to minor changes as the instrument is refined.
 
 The tool **does not save any information remotely** and all information stays on the local machine of the user. However, users have the option to import/export their data and disseminate those data as they wish (e.g., for reliability checks, archiving).
 
@@ -53,6 +53,9 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
 - Version 0.4.0: Bug fix
 - Version 0.4.1: Peer review edits (planning, import, minor UI edits)
 - Version 0.4.2: Add in remaining video
+- Version 0.4.3: Expand documentation section
+- Version 0.4.4: Add in ability to (dangerously) overwrite IDs (for goof ups)
+- Version 0.4.5: Small bump for convenience/clarity
 
 ## Referenced Works
 
@@ -70,7 +73,7 @@ Interested parties are encouraged to reach out the Drs. Gilroy and Ledford for o
  
 @radix-ui/react-dropdown-menu (2.1.1). MIT Licensed: [Repo](https://github.com/radix-ui/primitives.git) 
  
-@radix-ui/react-icons (1.3.0). MIT Licensed: [Repo](https://registry.npmjs.org/@radix-ui/react-icons/-/react-icons-1.3.0.tgz) 
+@radix-ui/react-icons (1.3.0). MIT Licensed: [Repo](https://registry.npmjs.org/@radix-ui/react-icons/-/react-icons-1.3.2.tgz) 
  
 @radix-ui/react-label (2.1.0). MIT Licensed: [Repo](https://github.com/radix-ui/primitives.git) 
  
@@ -142,5 +145,5 @@ Apache 2.0 - Shawn Gilroy, Louisiana State University
 
 ## Version
 
-Version 0.4.2
+Version 0.4.5
 

@@ -22,6 +22,18 @@ import { StudiesView } from './tabs/studies/studies_view';
 import { EmpiricalTabView } from './tabs/empirical/empirical_view';
 import { VisualsView } from './tabs/visuals/visuals_view';
 import { NotesTabView } from './tabs/notes/notes_view';
+import { Badge } from '@/components/ui/badge';
+import type { ReviewTypes } from '@/types/ReviewTypes';
+
+function RecorderStatus({ Mode }: { Mode: ReviewTypes | undefined }) {
+  if (!Mode) return <Badge className="bg-green-500 hover:bg-green-600">Primary</Badge>;
+
+  return Mode === 'Primary' ? (
+    <Badge className="bg-green-500 hover:bg-green-600">Primary</Badge>
+  ) : (
+    <Badge className="bg-blue-500 hover:bg-blue-600">Secondary</Badge>
+  );
+}
 
 export default function HomePage() {
   const { context, dispatch } = useContext(AppStateContext);
@@ -52,9 +64,11 @@ export default function HomePage() {
       <div className="flex flex-col gap-y-4 w-full">
         <Card className="w-full">
           <CardHeader className="flex flex-col md:flex-row justify-between gap-2">
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-2">
               <CardTitle>{`Review Name: ${context.ReviewName ?? 'UNNAMED'}`}</CardTitle>
-              <CardDescription>{`Reviewer Type: ${context.ReviewType ?? 'Primary'}`}</CardDescription>
+              <CardDescription>
+                {`Reviewer Role: `} <RecorderStatus Mode={context.ReviewType} />
+              </CardDescription>
             </div>
 
             <ButtonBar state={context} dispatch={dispatch} refFileInput={refFileInput} />

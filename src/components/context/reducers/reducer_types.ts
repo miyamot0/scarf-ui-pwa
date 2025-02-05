@@ -27,6 +27,10 @@ export type DatabaseAction =
       payload: { study_id: string; updatedData: StudyObject };
     }
   | {
+      type: 'overwrite_study_id';
+      payload: { study_id: string; updatedData: StudyObject };
+    }
+  | {
       type: 'update_study_internal_validity';
       payload: { study_id: string; updatedData: StudyObject };
     }
@@ -41,6 +45,8 @@ export type DatabaseAction =
         review_name: string;
         review_type: ReviewTypes;
         auto_save: boolean;
+        hide_maintenance: boolean;
+        hide_generalization: boolean;
       };
     }
   | {

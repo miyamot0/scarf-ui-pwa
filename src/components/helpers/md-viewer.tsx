@@ -5,18 +5,53 @@ import type { FC, ReactNode } from 'react';
 import type { MDXProps } from 'mdx/types';
 import type { EvaluateOptions } from '@mdx-js/mdx';
 import { evaluate } from '@mdx-js/mdx';
+import type { MDXComponents } from 'mdx/types';
+import { cn } from '@/lib/utils';
 
 type ReactMDXContent = (props: MDXProps) => ReactNode;
 type Runtime = Pick<EvaluateOptions, 'jsx' | 'jsxs' | 'Fragment'>;
 
-const runtime = { jsx, jsxs, Fragment } as Runtime;
+function useMDXComponents(components: MDXComponents): MDXComponents {
+  return {
+    p: ({ children }) => <p className="m-0 my-4">{children}</p>,
+    h2: ({ children }) => <h2 className="text-center m-0 mb-4">{children}</h2>,
+    h3: ({ children }) => <h3 className="font-bold m-0 my-4">{children}</h3>,
+    h4: ({ children }) => <h4 className="italic m-0 my-4">{children}</h4>,
+    ...components,
+  };
+}
 
-export const MdViewer: FC<{ source?: string }> = ({ source = '' }) => {
+const runtime = { jsx, jsxs, Fragment, useMDXComponents } as Runtime;
+
+export const MdViewer: FC<{ source?: string; callback?: (cb: boolean) => void }> = ({ source = '', callback }) => {
   const [MdxContent, setMdxContent] = useState<ReactMDXContent>(() => () => null);
+  const [displayed, setDisplayed] = useState(false);
 
   useEffect(() => {
-    evaluate(source, runtime).then((r) => setMdxContent(() => r.default));
-  }, [source]);
+    const updateUI = (display: boolean) => {
+      setDisplayed(display);
 
-  return <MdxContent />;
+      if (callback) {
+        callback(display);
+      }
+    };
+
+    evaluate(source, runtime).then((r) => {
+      setTimeout(function () {
+        setMdxContent(() => r.default);
+        updateUI(true);
+      }, 150);
+    });
+  }, [source, callback]);
+
+  return (
+    <div
+      className={cn('transition-all ease-in-out duration-300', {
+        'opacity-100': displayed,
+        'opacity-0': !displayed,
+      })}
+    >
+      <MdxContent />
+    </div>
+  );
 };

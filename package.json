@@ -1,5 +1,5 @@
 {
-  "version": "0.4.2",
+  "version": "0.4.5",
   "name": "scarf-ui-pwa",
   "description": "SCARF-UI-PWA is a PWA to support research synthesis featuring SCEDs",
   "homepage": "https://www.smallnstats.com",
@@ -32,6 +32,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "update-questions": "tsx ./src/questions/convert_banks.ts",
     "build-readme": "tsx ./scripts/index.ts",
     "check-licenses": "npx license-report --only=prod --output=json > ./scripts/licenses.json",
     "prebuild": "yarn run check-licenses && yarn run build-readme",
@@ -93,6 +94,7 @@
     "@types/uuid": "^10.0.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
+    "convert-csv-to-json": "^2.50.0",
     "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",

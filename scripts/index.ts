@@ -71,7 +71,7 @@ function generate_manifest_archive() {
   fs.writeFileSync('./src/assets/archives.json', JSON.stringify(archive_vector), 'utf-8');
 }
 
-const converage_pct = `${coverageSummary.total.lines.pct}_Percent`;
+const coverage_pct = `${coverageSummary.total.lines.pct}_Percent`;
 const version_text = `Version ${packageJson.version}\r\n`;
 const software_pkg_text = populate_software().join('\r\n \r\n');
 
@@ -81,7 +81,7 @@ let readme_md = read_md();
 readme_md = readme_md.replace('{{VERSION}}', version_text);
 readme_md = readme_md.replace('{{VERSION_NUMBER}}', packageJson.version);
 readme_md = readme_md.replace('{{LICENSES}}', software_pkg_text);
-readme_md = readme_md.replace('{{PERCENTAGE}}', converage_pct);
+readme_md = readme_md.replace('{{PERCENTAGE}}', coverage_pct);
 readme_md = readme_md.replace('{{PERCENTAGE_COLOR}}', coverage_color);
 
 write_md(readme_md);

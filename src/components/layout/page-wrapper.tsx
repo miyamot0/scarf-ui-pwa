@@ -37,6 +37,18 @@ export default function PageWrapper({ children, className }: Props) {
           </Link>{' '}
           @ Louisiana State University
         </div>
+        <div>
+          The original Single-Case Analysis and Review Framework (SCARF) is available{' '}
+          <Link
+            target="_blank"
+            to={'https://ebip.vkcsites.org/scarfv2/'}
+            aria-label="Link to Original SCARF Website"
+            className="text-blue-600 hover:text-blue-500 underline"
+          >
+            here
+          </Link>
+          .
+        </div>
         <div className="font-semibold">{`Build Version ${BUILD_VERSION} (${BUILD_DATE})`}</div>
         <div className="flex flex-row items-center justify-center gap-2">
           <Link aria-label="Link to Twitter/X page" to={'https://x.com/gilroy_shawn'} target="_blank">

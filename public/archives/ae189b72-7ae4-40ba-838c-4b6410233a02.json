@@ -1,7 +1,7 @@
 {
   "ID": "fbbcccbf-df50-40c2-b4eb-5ab171cdc69e",
   "DialogState": {},
-  "Title": "Systematic review of supports for bilingual functional communication training",
+  "Title": "Ongoing - Systematic review of supports for bilingual functional communication training",
   "Author": "McGill, F. & Gilroy, S. P.",
   "DateSaved": "09/23/2024",
   "ReviewPlans": {
@@ -14,7 +14,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "RQ1: What is the scope and breadth of existing support for multi-lingual communication training practices (e.g., studies published, populations supported, outcomes captured (rate of responding, language preference)?\nRQ2: What is the representation of verbal operants and VB in programmed support for children w/ social-communication needs?\nRQ3: Are methods used to support the emergence of VB sufficient to respond functionally across relevant cultural contexts?"
       },
       {
         "Category": "Planning",
@@ -23,7 +23,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "Individual studies were determined eligible for inclusion in the review if they met several criteria. First, the population of interest consisted of participants with a linguistically diverse background (e.g., exposed to a language other than English in the US) who also presented with either autism or another developmental disorder (e.g., speech delay, cognitive impairment). Second, studies were included in the review if they included methods to establish and/or assess learner communicative performance (i.e., as speaker and/or listener) across multiple language contexts (i.e., L1, L2). As such, relevant studies could consist of teaching initial communication, evaluating communication performance across multiple linguistic contexts (e.g., L1 vs. L2), or evaluating other relevant dimensions of responding across multiple linguistic contexts (e.g., preferences for responding in either L1 or L2). Eligible studies focusing on these topics would have had to provide sufficient methodological details to enable subsequent replication (e.g., teaching/assessment procedures are described completely). Third, eligible studies did not have to be peer-reviewed (i.e., “gray” literature was retained) but were required to have full-text resources available for download. There were no restrictions on specific study methods (e.g., single-case vs. group design), settings (e.g., home vs. clinic), or learner age (e.g., preschool vs. school-aged children)."
       },
       {
         "Category": "Planning",
@@ -32,7 +32,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "Searches of the APA PsycINFO, Web of Science, Education Resources Information Center, and Psychological and Behavioral Sciences Collection databases were conducted using the following keywords and Boolean operators: “Autis* AND (biling* OR multiling*)”. "
       },
       {
         "Category": "Planning",
@@ -41,7 +41,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "Upon determining the eligibility of studies for inclusion in the review, ancestral searches were performed by examining respective reference lists to identify other potentially suitable texts. Upon completing ancestral searches, individual hand searches of journals publishing relevant works (i.e., teaching bilingual communication in our target population) were searched to determine whether any additional relevant works may exist but were otherwise not yet indexed in databases. Corresponding authors for respective works were contacted individually as well to determine whether any relevant source material was otherwise not revealed in the search."
       },
       {
         "Category": "Planning",
@@ -50,7 +50,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -59,7 +59,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -68,7 +68,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -77,7 +77,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -86,7 +86,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -95,7 +95,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -104,7 +104,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -113,7 +113,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -122,7 +122,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -131,7 +131,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -140,7 +140,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -149,7 +149,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "The ages, genders, and reported diagnoses for individual participants were recorded if reported in the source work. If these were not reported, they were listed as being not reported (NR). "
       },
       {
         "Category": "Planning",
@@ -158,16 +158,16 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
         "QuestionID": "Plan_Reporting_12",
-        "QuestionStem": "What implementer demographic characteristics must authors report to recive FULL or PARTIAL credit for adequate reporting? For example, for FULL credit, you might require reporting of gender, age range, and race/ethnicity. If one but not all are reported, you might report PARTIAL.",
+        "QuestionStem": "What implementer demographic characteristics must authors report to receive FULL or PARTIAL credit for adequate reporting? For example, for FULL credit, you might require reporting of gender, age range, and race/ethnicity. If one but not all are reported, you might report PARTIAL.",
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -176,7 +176,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -185,7 +185,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -194,7 +194,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -203,7 +203,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -212,7 +212,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "This is not a key focus of the review."
       },
       {
         "Category": "Planning",
@@ -221,7 +221,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       },
       {
         "Category": "Planning",
@@ -230,7 +230,7 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "Yes, we are inspecting the degree to which methods included steps toward generalization."
       },
       {
         "Category": "Planning",
@@ -239,11 +239,11 @@
         "QuestionInstruction": "",
         "QuestionType": "Text",
         "Locale": "en-us",
-        "Response": "TODO"
+        "Response": "N/A"
       }
     ]
   },
-  "DisplayState": "visuals",
+  "DisplayState": "notes",
   "Studies": [
     {
       "StudyID": "3c9d09c4-3ca4-4eeb-b359-593e2c6440cd",
@@ -1085,7 +1085,7 @@
     {
       "StudyID": "8b365ecf-423b-4840-99e5-f3a3fbbd0a9b",
       "StudyTag": "003_PadillaDalmau11_P01",
-      "StudyTitle": "CORRECT - A Preliminary Evaluation of Functional Communication Training Effectiveness and Language Preference When Spanish and English are Manipulated",
+      "StudyTitle": "A Preliminary Evaluation of Functional Communication Training Effectiveness and Language Preference When Spanish and English are Manipulated",
       "StudyAuthors": "Padilla Dalmau (2011)",
       "StudyJournal": "Journal of Behavioral Education",
       "StudyYear": 2011,
@@ -1364,7 +1364,7 @@
     {
       "StudyID": "f6342b4b-57ae-4301-8b71-210fdccf0933",
       "StudyTag": "003_PadillaDalmau11_P02",
-      "StudyTitle": "CORRECT - A Preliminary Evaluation of Functional Communication Training Effectiveness and Language Preference When Spanish and English are Manipulated",
+      "StudyTitle": "A Preliminary Evaluation of Functional Communication Training Effectiveness and Language Preference When Spanish and English are Manipulated",
       "StudyAuthors": "Padilla Dalmau (2011)",
       "StudyJournal": "Journal of Behavioral Education",
       "StudyYear": 2011,
@@ -1643,7 +1643,7 @@
     {
       "StudyID": "0964c630-d472-4698-bd60-45cbdfe5ab82",
       "StudyTag": "004_PadillaDalmau12_P01",
-      "StudyTitle": "SHOULD WE KEEP? - A Preliminary Evaluation of Functional Communication Training Effectiveness and Language Preference When Spanish and English are Manipulated",
+      "StudyTitle": "A Preliminary Evaluation of Functional Communication Training Effectiveness and Language Preference When Spanish and English are Manipulated",
       "StudyAuthors": "Padilla Dalmau (2012)",
       "StudyJournal": "Unpublished Dissertation/Thesis",
       "StudyYear": 2012,
@@ -1922,7 +1922,7 @@
     {
       "StudyID": "76bf0e36-1e62-4341-9290-ee9c476b721b",
       "StudyTag": "004_PadillaDalmau12_P02",
-      "StudyTitle": "SHOULD WE KEEP? - A Preliminary Evaluation of Functional Communication Training Effectiveness and Language Preference When Spanish and English are Manipulated",
+      "StudyTitle": "A Preliminary Evaluation of Functional Communication Training Effectiveness and Language Preference When Spanish and English are Manipulated",
       "StudyAuthors": "Padilla Dalmau (2012)",
       "StudyJournal": "Unpublished Dissertation/Thesis",
       "StudyYear": 2012,
@@ -2201,7 +2201,7 @@
     {
       "StudyID": "97ecaf5b-2603-4043-b0b3-68170f79d0d1",
       "StudyTag": "004_PadillaDalmau12_P03",
-      "StudyTitle": "SHOULD WE KEEP? - A Preliminary Evaluation of Functional Communication Training Effectiveness and Language Preference When Spanish and English are Manipulated",
+      "StudyTitle": "A Preliminary Evaluation of Functional Communication Training Effectiveness and Language Preference When Spanish and English are Manipulated",
       "StudyAuthors": "Padilla Dalmau (2012)",
       "StudyJournal": "Unpublished Dissertation/Thesis",
       "StudyYear": 2012,
@@ -2480,7 +2480,7 @@
     {
       "StudyID": "d3bbad64-64e9-40f5-b682-498530c9bb19",
       "StudyTag": "004_PadillaDalmau12_P04",
-      "StudyTitle": "SHOULD WE KEEP? - A Preliminary Evaluation of Functional Communication Training Effectiveness and Language Preference When Spanish and English are Manipulated",
+      "StudyTitle": "A Preliminary Evaluation of Functional Communication Training Effectiveness and Language Preference When Spanish and English are Manipulated",
       "StudyAuthors": "Padilla Dalmau (2012)",
       "StudyJournal": "Unpublished Dissertation/Thesis",
       "StudyYear": 2012,

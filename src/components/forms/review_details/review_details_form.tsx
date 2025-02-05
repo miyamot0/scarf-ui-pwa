@@ -21,6 +21,8 @@ export function ReviewDetailsForm() {
       title: context?.ReviewName ?? '',
       type: context?.ReviewType ?? 'Primary',
       auto_save: context?.AutoSave ?? false,
+      hide_maintenance: context?.HideMaintenance ?? false,
+      hide_generalization: context?.HideGeneralization ?? false,
     },
   });
 
@@ -31,6 +33,8 @@ export function ReviewDetailsForm() {
         review_name: values.title,
         review_type: values.type,
         auto_save: values.auto_save,
+        hide_maintenance: values.hide_maintenance,
+        hide_generalization: values.hide_generalization,
       },
     });
 
@@ -104,6 +108,38 @@ export function ReviewDetailsForm() {
               <div className="space-y-0.5">
                 <FormLabel className="text-base">Auto Save Progress</FormLabel>
                 <FormDescription>Save to local machine after each update</FormDescription>
+              </div>
+              <FormControl>
+                <Switch checked={field.value} onCheckedChange={field.onChange} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="hide_maintenance"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-center justify-between rounded-lg ">
+              <div className="space-y-0.5">
+                <FormLabel className="text-base">Hide Maintenance Visuals</FormLabel>
+                <FormDescription>Hide visuals related to Maintenance</FormDescription>
+              </div>
+              <FormControl>
+                <Switch checked={field.value} onCheckedChange={field.onChange} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="hide_generalization"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-center justify-between rounded-lg ">
+              <div className="space-y-0.5">
+                <FormLabel className="text-base">Hide Generalization Visuals</FormLabel>
+                <FormDescription>Hide visuals related to Generalization</FormDescription>
               </div>
               <FormControl>
                 <Switch checked={field.value} onCheckedChange={field.onChange} />

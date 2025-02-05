@@ -43,7 +43,11 @@ export function AppStateContextProvider({ children }: { children: ReactNode }) {
       const parsedSettings = JSON.parse(settings);
 
       if (parsedSettings) {
-        setAppContext(parsedSettings);
+        setAppContext({
+          ...parsedSettings,
+          HideGeneralization: parsedSettings.HideGeneralization ?? false,
+          HideMaintenance: parsedSettings.HideMaintenance ?? false,
+        });
       }
     }
   }, []);

@@ -54,6 +54,7 @@ export function ButtonBar({
         type="file"
         ref={refFileInput}
         className="hidden"
+        accept=".json"
         onChange={(e) => {
           if (!e.target.files) return;
 
@@ -261,9 +262,9 @@ export function ButtonBar({
         </TooltipContent>
       </Tooltip>
 
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <AlertDialog>
+      <AlertDialog>
+        <Tooltip>
+          <TooltipTrigger asChild>
             <AlertDialogTrigger asChild>
               <Button
                 size={'sm'}
@@ -273,41 +274,40 @@ export function ButtonBar({
                 <DeleteIcon size={18} />
               </Button>
             </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-                <AlertDialogDescription>
-                  This action will remove data from the local cache and this action cannot be undone. Ensure that you
-                  have exported the latest data to a file should you wish to revisit that data at a later time.
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction
-                  className="bg-red-500 hover:bg-red-600 text-white hover:text-white"
-                  onClick={() => {
-                    dispatch({
-                      type: 'reset',
-                    });
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Delete/Unload Project.</p>
+          </TooltipContent>
+        </Tooltip>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This action will remove data from the local cache and this action cannot be undone. Ensure that you have
+              exported the latest data to a file should you wish to revisit that data at a later time.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              className="bg-red-500 hover:bg-red-600 text-white hover:text-white"
+              onClick={() => {
+                dispatch({
+                  type: 'reset',
+                });
 
-                    toast('Local data reset', {
-                      description:
-                        'Your local data cache has been reset. Either load another set or begin another review.',
-                      duration: 2000,
-                      dismissible: true,
-                    });
-                  }}
-                >
-                  Clear Data
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>Delete/Unload Project.</p>
-        </TooltipContent>
-      </Tooltip>
+                toast('Local data reset', {
+                  description: 'Your local data cache has been reset. Either load another set or begin another review.',
+                  duration: 2000,
+                  dismissible: true,
+                });
+              }}
+            >
+              Clear Data
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }

@@ -42,7 +42,7 @@
  {
   "Category": "Planning",
   "QuestionID": "Plan_Reporting_2",
-  "QuestionStem": "What performance information about participantsmust authors report to get FULL and PARTIAL credit for adequate reporting? Consider information that is relevant for your research question. For example, you may require information about play skills if the intervention is conducted in a play-based context, but this would be non-critical information for a question related to discrete trial instruction.",
+  "QuestionStem": "What performance information about participants must authors report to get FULL and PARTIAL credit for adequate reporting? Consider information that is relevant for your research question. For example, you may require information about play skills if the intervention is conducted in a play-based context, but this would be non-critical information for a question related to discrete trial instruction.",
   "QuestionInstruction": "",
   "QuestionType": "Text",
   "Locale": "en-us"
@@ -50,7 +50,7 @@
  {
   "Category": "Planning",
   "QuestionID": "Plan_Reporting_3",
-  "QuestionStem": "What inclusion criteria information about participantsmust authors report to get FULL and PARTIAL credit for adequate reporting? Consider information that is relevant for your research question. For example, you may require that authors provide information about functional inclusion criteria likely to impact benefit for FULL credit, give PARTIAL credit if inclusion criteria are all unrelated to theory of change but reported (e.g., population, recruitment location), and give NO credit if inclusion criteria are not reported.",
+  "QuestionStem": "What inclusion criteria information about participants must authors report to get FULL and PARTIAL credit for adequate reporting? Consider information that is relevant for your research question. For example, you may require that authors provide information about functional inclusion criteria likely to impact benefit for FULL credit, give PARTIAL credit if inclusion criteria are all unrelated to theory of change but reported (e.g., population, recruitment location), and give NO credit if inclusion criteria are not reported.",
   "QuestionInstruction": "",
   "QuestionType": "Text",
   "Locale": "en-us"
@@ -74,7 +74,7 @@
  {
   "Category": "Planning",
   "QuestionID": "Plan_Reporting_6",
-  "QuestionStem": "What information about the measurement system must authors report to get FULL or PARTIAL credit for adequate reporting? For example, you might require for FULL credit that authors report system used (e.g., partial interval, timed event recording), and must report when/how (e.g., via video, in situ), and who collects the data. PARTIAL credit woudl be given if authors report system used but fail to report one or both of the other details. NO credit if authors do not report at least system used.",
+  "QuestionStem": "What information about the measurement system must authors report to get FULL or PARTIAL credit for adequate reporting? For example, you might require for FULL credit that authors report system used (e.g., partial interval, timed event recording), and must report when/how (e.g., via video, in situ), and who collects the data. PARTIAL credit would be given if authors report system used but fail to report one or both of the other details. NO credit if authors do not report at least system used.",
   "QuestionInstruction": "",
   "QuestionType": "Text",
   "Locale": "en-us"
@@ -90,7 +90,7 @@
  {
   "Category": "Planning",
   "QuestionID": "Plan_DV_Measurement_4",
-  "QuestionStem": "For the purposes of this review, what frequency is sufficient for reliability data colletion (i.e., how often must authors collect interobserver agreement data in each condition)? If you are primarily interested in only included the studies with the highest believability, or if included studies are expected to have complex dependent variables measured in complex settings, you may want to set a high criterion. Otherwise, you may want to include a lower criterion. ",
+  "QuestionStem": "For the purposes of this review, what frequency is sufficient for reliability data collection (i.e., how often must authors collect interobserver agreement data in each condition)? If you are primarily interested in only included the studies with the highest believability, or if included studies are expected to have complex dependent variables measured in complex settings, you may want to set a high criterion. Otherwise, you may want to include a lower criterion. ",
   "QuestionInstruction": "",
   "QuestionType": "Text",
   "Locale": "en-us"
@@ -122,7 +122,7 @@
  {
   "Category": "Planning",
   "QuestionID": "Plan_Reporting_10",
-  "QuestionStem": "What characteristics of settings must authors describe to meet FULL and PARTIAL credit for adequate reporting Consider social and physical aspects. For example, for FULL credit, authors may need to describe whether other non-participants were present (e.g., in classroom-based interventoins) and what type of room it occurred in (e.g., bedroom, typical classroom, empty resource room). PARTIAL includes one but not both.",
+  "QuestionStem": "What characteristics of settings must authors describe to meet FULL and PARTIAL credit for adequate reporting Consider social and physical aspects. For example, for FULL credit, authors may need to describe whether other non-participants were present (e.g., in classroom-based interventions) and what type of room it occurred in (e.g., bedroom, typical classroom, empty resource room). PARTIAL includes one but not both.",
   "QuestionInstruction": "",
   "QuestionType": "Text",
   "Locale": "en-us"
@@ -138,7 +138,7 @@
  {
   "Category": "Planning",
   "QuestionID": "Plan_Reporting_12",
-  "QuestionStem": "What implementer demographic characteristics must authors report to recive FULL or PARTIAL credit for adequate reporting? For example, for FULL credit, you might require reporting of gender, age range, and race/ethnicity. If one but not all are reported, you might report PARTIAL.",
+  "QuestionStem": "What implementer demographic characteristics must authors report to receive FULL or PARTIAL credit for adequate reporting? For example, for FULL credit, you might require reporting of gender, age range, and race/ethnicity. If one but not all are reported, you might report PARTIAL.",
   "QuestionInstruction": "",
   "QuestionType": "Text",
   "Locale": "en-us"
@@ -154,7 +154,7 @@
  {
   "Category": "Planning",
   "QuestionID": "Plan_Fidelity_3",
-  "QuestionStem": "For the purposes of this review, what frequency is sufficient for fidelity data colletion (i.e., how often must authors collect fidelity data in each condition)? If you are primarily interested in only included the studies with the highest believability, or if included studies are expected to have complex dependent variables measured in complex settings, you may want to set a high criterion. Otherwise, you may want to include a lower criterion. Note that fidelity data may be graphed and is not necessarily reported as a percentage correct (e.g., if your research question is about responsive interventions, you may have a study that graphs the number of adult responsivity behaviors in each condition).",
+  "QuestionStem": "For the purposes of this review, what frequency is sufficient for fidelity data collection (i.e., how often must authors collect fidelity data in each condition)? If you are primarily interested in only included the studies with the highest believability, or if included studies are expected to have complex dependent variables measured in complex settings, you may want to set a high criterion. Otherwise, you may want to include a lower criterion. Note that fidelity data may be graphed and is not necessarily reported as a percentage correct (e.g., if your research question is about responsive interventions, you may have a study that graphs the number of adult responsivity behaviors in each condition).",
   "QuestionInstruction": "",
   "QuestionType": "Text",
   "Locale": "en-us"

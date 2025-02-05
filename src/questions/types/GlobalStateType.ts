@@ -16,6 +16,8 @@ export type GlobalStateType = {
   Notes?: Descendant[];
   NeedSave: boolean;
   ReadOnly: boolean;
+  HideMaintenance?: boolean;
+  HideGeneralization?: boolean;
 };
 
 export type SavedGlobalStateType = GlobalStateType & {
