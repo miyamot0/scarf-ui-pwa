@@ -1,10 +1,17 @@
 import { ReliabilityState } from '@/types/ReliabilityState';
 import { createContext, Dispatch, ReactNode, SetStateAction, useState } from 'react';
 
+export type ContextQueryType = {
+  StudyID: string;
+  Primary?: string;
+  Reliability?: string;
+  Key: string[];
+};
+
 const DEFAULT_CONTEXT: ReliabilityState = {
   primary: undefined,
   reliability: undefined,
-  key: undefined,
+  state: undefined,
 };
 
 export const ConsensusStateContext = createContext({
