@@ -1,21 +1,21 @@
 import { PanelStatus } from './data_set_status';
-import { forwardRef } from 'react';
+import { forwardRef, useContext } from 'react';
 import { ReviewTypes } from '@/types/ReviewTypes';
-import { ReliabilityState } from '@/types/ReliabilityState';
 import { toast } from 'sonner';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { useForwardRef } from '@/components/hooks/useForwardRef';
+import { ConsensusStateContext } from '../context/consensus-provider';
 
 interface CustomInputProps extends React.ComponentPropsWithoutRef<'input'> {
   coderType: ReviewTypes;
-  reliabilityState: ReliabilityState;
-  setReliState: (state: ReliabilityState) => void;
 }
 
 export const DataInputPanelWithRef = forwardRef<HTMLInputElement, CustomInputProps>((props, ref) => {
-  const { coderType, reliabilityState, setReliState } = props;
+  const { context, setConsensusContext } = useContext(ConsensusStateContext);
 
-  const relevantState = coderType === 'Primary' ? reliabilityState.primary : reliabilityState.reliability;
+  const { coderType } = props;
+
+  const relevantState = coderType === 'Primary' ? context.primary : context.reliability;
 
   const inputRef = useForwardRef<HTMLInputElement>(ref);
 
@@ -40,13 +40,13 @@ export const DataInputPanelWithRef = forwardRef<HTMLInputElement, CustomInputPro
                 const state = JSON.parse(text);
 
                 if (coderType === 'Primary') {
-                  setReliState({
-                    ...reliabilityState,
+                  setConsensusContext({
+                    ...context,
                     primary: state,
                   });
                 } else {
-                  setReliState({
-                    ...reliabilityState,
+                  setConsensusContext({
+                    ...context,
                     reliability: state,
                   });
                 }

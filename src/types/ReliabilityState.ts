@@ -1,6 +1,7 @@
-import { GlobalStateType } from '@/questions/types/GlobalStateType'
+import { GlobalStateType } from '@/questions/types/GlobalStateType';
 
 export type ReliabilityState = {
-    primary?: GlobalStateType
-    reliability?: GlobalStateType
-}
+  primary?: GlobalStateType;
+  reliability?: GlobalStateType;
+  key?: string;
+};
