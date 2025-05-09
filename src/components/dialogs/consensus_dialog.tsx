@@ -141,16 +141,16 @@ export function ConsensusDialog() {
           </DialogHeader>
 
           <div className="flex flex-col gap-4">
-            <div className="grid grid-cols-3 items-center">
+            <div className="grid grid-cols-4 items-center">
               <div className="col-span-1">Primary: </div>
-              <Button className="col-span-2 text-wrap" onClick={() => handleUpdate('Primary')}>
+              <Button className="col-span-3 line-clamp-1 text-ellipsis" onClick={() => handleUpdate('Primary')}>
                 {context.state?.Primary}
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 items-center">
+            <div className="grid grid-cols-4 items-center">
               <div className="col-span-1">Reliability: </div>
-              <Button className="col-span-2 text-wrap" onClick={() => handleUpdate('Reliability')}>
+              <Button className="col-span-3 line-clamp-1 text-ellipsis" onClick={() => handleUpdate('Reliability')}>
                 {context.state?.Reliability}
               </Button>
             </div>
