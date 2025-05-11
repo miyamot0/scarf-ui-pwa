@@ -6,6 +6,7 @@ import { Button } from '../ui/button';
 import { GlobalStateType } from '@/questions/types/GlobalStateType';
 import { TypeOfValidityObject } from '@/questions/types/QuestionTypes';
 import { toast } from 'sonner';
+import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 
 type ConsensusAction = 'Primary' | 'Reliability';
 
@@ -141,16 +142,42 @@ export function ConsensusDialog() {
 
             <div className="grid grid-cols-4 items-center">
               <div className="col-span-1">Primary: </div>
-              <Button className="col-span-3 line-clamp-1 text-ellipsis" onClick={() => handleUpdate('Primary')}>
-                {context.state?.Primary}
-              </Button>
+
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    className="col-span-3 line-clamp-1 text-ellipsis"
+                    onClick={() => handleUpdate('Primary')}
+                    tabIndex={-1}
+                  >
+                    {context.state?.Primary}
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="max-w-[200px]">Clicking here means the Primary coder response seems most accurate</p>
+                </TooltipContent>
+              </Tooltip>
             </div>
 
             <div className="grid grid-cols-4 items-center">
               <div className="col-span-1">Reliability: </div>
-              <Button className="col-span-3 line-clamp-1 text-ellipsis" onClick={() => handleUpdate('Reliability')}>
-                {context.state?.Reliability}
-              </Button>
+
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    className="col-span-3 line-clamp-1 text-ellipsis"
+                    onClick={() => handleUpdate('Reliability')}
+                    tabIndex={-1}
+                  >
+                    {context.state?.Reliability}
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="max-w-[200px]">
+                    Clicking here means the Reliability coder response seems most accurate
+                  </p>
+                </TooltipContent>
+              </Tooltip>
             </div>
           </div>
         </DialogContent>

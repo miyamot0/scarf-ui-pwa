@@ -269,7 +269,7 @@ export function BuildColumns(): ColumnDef<StudyObjectPair>[] {
             row.original.primary.StudyID,
             row.original.primary.StudyTitle ?? '',
             row.original.reliability?.StudyTitle ?? '',
-            'What is the title of this particular study/demonstration?'
+            'What is the preferred title of this particular study/demonstration?'
           )
         ),
     },
