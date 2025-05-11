@@ -7,12 +7,10 @@ import { GlobalStateType } from '@/questions/types/GlobalStateType';
 import { TypeOfValidityObject } from '@/questions/types/QuestionTypes';
 import { toast } from 'sonner';
 
-type ConsensusAction = 'Primary' | 'Reliability' | 'None';
+type ConsensusAction = 'Primary' | 'Reliability';
 
 export function ConsensusDialog() {
   const { context, setConsensusContext } = useContext(ConsensusStateContext);
-
-  const { state } = context;
 
   const handleClose = () => {
     setConsensusContext((prev) => ({
@@ -22,9 +20,9 @@ export function ConsensusDialog() {
   };
 
   const handleUpdate = (decision: ConsensusAction) => {
-    if (state === undefined) return;
+    if (context.state === undefined) return;
 
-    const { StudyID, Key, Primary, Reliability } = state;
+    const { StudyID, Key, Primary, Reliability } = context.state;
 
     const depth = Key.length;
 
@@ -130,17 +128,17 @@ export function ConsensusDialog() {
   };
 
   return (
-    <Dialog open={state !== undefined} onOpenChange={() => handleClose()} modal={true}>
+    <Dialog open={context.state !== undefined} onOpenChange={() => handleClose()} modal={true}>
       <DialogOverlay>
         <DialogContent className="max-h-[80%] max-w-3xl overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>Resolve Disagreements</DialogTitle>
-            <DialogDescription>
-              Confirm coding for: {context.state?.Key[context.state.Key.length - 1]}
-            </DialogDescription>
+            <DialogTitle>Disagreement Resolution Dialog</DialogTitle>
+            <DialogDescription>Confirm which value is most accurate (Primary or Reliability)</DialogDescription>
           </DialogHeader>
 
           <div className="flex flex-col gap-4">
+            <p>...</p>
+
             <div className="grid grid-cols-4 items-center">
               <div className="col-span-1">Primary: </div>
               <Button className="col-span-3 line-clamp-1 text-ellipsis" onClick={() => handleUpdate('Primary')}>

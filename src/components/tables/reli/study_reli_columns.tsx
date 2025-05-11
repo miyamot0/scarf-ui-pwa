@@ -1,4 +1,4 @@
-import { StudyObjectPair } from '@/questions/types/QuestionTypes';
+import { QuestionObjectHolder, StudyObjectPair } from '@/questions/types/QuestionTypes';
 import { ColumnDef, Row } from '@tanstack/react-table';
 import { DataTableColumnHeader } from '../general/study_column_header';
 import {
@@ -18,6 +18,27 @@ import {
 import { ConsensusStateContext, ContextQueryType } from '@/pages/reliability/context/consensus-provider';
 import { useContext } from 'react';
 
+const GetResponses = (
+  QuestionsPrimary: QuestionObjectHolder[],
+  QuestionsReliability: QuestionObjectHolder[],
+  QuestionID: string
+) => {
+  const PrimaryResponse = QuestionsPrimary.find((q) => q.QuestionID === QuestionID)?.Response;
+
+  const ReliabilityResponse = QuestionsReliability.find((q) => q.QuestionID === QuestionID)?.Response;
+
+  return { PrimaryResponse, ReliabilityResponse };
+};
+
+const PrepareContext = (Key: string[], StudyID: string, Primary?: string, Reliability?: string) => {
+  return {
+    Key,
+    StudyID,
+    Primary,
+    Reliability,
+  } satisfies ContextQueryType;
+};
+
 const empirical_cols_1 = InternalValidityQuestionDefault.Questions.map((question) => {
   const question_lookup = InternalValidityQuestions.find((q) => q.QuestionID === question.QuestionID);
 
@@ -27,20 +48,20 @@ const empirical_cols_1 = InternalValidityQuestionDefault.Questions.map((question
       <DataTableColumnTooltip title={question.QuestionID} description={question_lookup?.QuestionStem ?? ''} />
     ),
     cell: ({ row }: { row: Row<StudyObjectPair> }) => {
-      const primary_response = row.original.primary.InternalValidity.Questions.find(
-        (q) => q.QuestionID === question.QuestionID
-      )?.Response;
+      const { PrimaryResponse, ReliabilityResponse } = GetResponses(
+        row.original.primary.InternalValidity.Questions,
+        row.original.reliability?.InternalValidity.Questions ?? [],
+        question.QuestionID
+      );
 
-      const reliability_response = row.original.reliability?.InternalValidity.Questions.find(
-        (q) => q.QuestionID === question.QuestionID
-      )?.Response;
+      const ctx = PrepareContext(
+        ['InternalValidity', question.QuestionID],
+        row.original.primary.StudyID,
+        PrimaryResponse,
+        ReliabilityResponse
+      );
 
-      return style_dynamic(primary_response, reliability_response, {
-        Key: ['InternalValidity', question.QuestionID],
-        StudyID: row.original.primary.StudyID,
-        Primary: primary_response,
-        Reliability: reliability_response,
-      } satisfies ContextQueryType);
+      return style_dynamic(PrimaryResponse, ReliabilityResponse, ctx);
     },
 
     enableHiding: false,
@@ -58,20 +79,20 @@ const empirical_cols_2 = ExternalValidityQuestionDefault.Questions.map((question
     ),
 
     cell: ({ row }: { row: Row<StudyObjectPair> }) => {
-      const primary_response = row.original.primary.ExternalValidity.Questions.find(
-        (q) => q.QuestionID === question.QuestionID
-      )?.Response;
+      const { PrimaryResponse, ReliabilityResponse } = GetResponses(
+        row.original.primary.ExternalValidity.Questions,
+        row.original.reliability?.ExternalValidity.Questions ?? [],
+        question.QuestionID
+      );
 
-      const reliability_response = row.original.reliability?.ExternalValidity.Questions.find(
-        (q) => q.QuestionID === question.QuestionID
-      )?.Response;
+      const ctx = PrepareContext(
+        ['ExternalValidity', question.QuestionID],
+        row.original.primary.StudyID,
+        PrimaryResponse,
+        ReliabilityResponse
+      );
 
-      return style_dynamic(primary_response, reliability_response, {
-        Key: ['ExternalValidity', question.QuestionID],
-        StudyID: row.original.primary.StudyID,
-        Primary: primary_response,
-        Reliability: reliability_response,
-      } satisfies ContextQueryType);
+      return style_dynamic(PrimaryResponse, ReliabilityResponse, ctx);
     },
 
     enableHiding: false,
@@ -89,20 +110,20 @@ const empirical_cols_3 = ReportingQuestionDefault.Questions.map((question) => {
     ),
 
     cell: ({ row }: { row: Row<StudyObjectPair> }) => {
-      const primary_response = row.original.primary.Reporting.Questions.find(
-        (q) => q.QuestionID === question.QuestionID
-      )?.Response;
+      const { PrimaryResponse, ReliabilityResponse } = GetResponses(
+        row.original.primary.Reporting.Questions,
+        row.original.reliability?.Reporting.Questions ?? [],
+        question.QuestionID
+      );
 
-      const reliability_response = row.original.reliability?.Reporting.Questions.find(
-        (q) => q.QuestionID === question.QuestionID
-      )?.Response;
+      const ctx = PrepareContext(
+        ['Reporting', question.QuestionID],
+        row.original.primary.StudyID,
+        PrimaryResponse,
+        ReliabilityResponse
+      );
 
-      return style_dynamic(primary_response, reliability_response, {
-        Key: ['Reporting', question.QuestionID],
-        StudyID: row.original.primary.StudyID,
-        Primary: primary_response,
-        Reliability: reliability_response,
-      } satisfies ContextQueryType);
+      return style_dynamic(PrimaryResponse, ReliabilityResponse, ctx);
     },
 
     enableHiding: false,
@@ -120,20 +141,20 @@ const empirical_cols_4 = OutcomesQuestionDefault.Questions.map((question) => {
     ),
 
     cell: ({ row }: { row: Row<StudyObjectPair> }) => {
-      const primary_response = row.original.primary.Outcomes.Questions.find(
-        (q) => q.QuestionID === question.QuestionID
-      )?.Response;
+      const { PrimaryResponse, ReliabilityResponse } = GetResponses(
+        row.original.primary.Outcomes.Questions,
+        row.original.reliability?.Outcomes.Questions ?? [],
+        question.QuestionID
+      );
 
-      const reliability_response = row.original.reliability?.Outcomes.Questions.find(
-        (q) => q.QuestionID === question.QuestionID
-      )?.Response;
+      const ctx = PrepareContext(
+        ['Outcomes', question.QuestionID],
+        row.original.primary.StudyID,
+        PrimaryResponse,
+        ReliabilityResponse
+      );
 
-      return style_dynamic(primary_response, reliability_response, {
-        Key: ['Outcomes', question.QuestionID],
-        StudyID: row.original.primary.StudyID,
-        Primary: primary_response,
-        Reliability: reliability_response,
-      } satisfies ContextQueryType);
+      return style_dynamic(PrimaryResponse, ReliabilityResponse, ctx);
     },
 
     enableHiding: false,
@@ -198,56 +219,76 @@ export function BuildColumns(): ColumnDef<StudyObjectPair>[] {
       accessorKey: 'StudyTag',
       header: ({ column }) => <DataTableColumnHeader column={column} title="Tag" />,
       cell: ({ row }) =>
-        style_dynamic(row.original.primary.StudyTag, row.original.reliability?.StudyTag, {
-          Key: ['StudyTag'],
-          StudyID: row.original.primary.StudyID,
-          Primary: row.original.primary.StudyTag ?? '',
-          Reliability: row.original.reliability?.StudyTag ?? '',
-        } satisfies ContextQueryType),
+        style_dynamic(
+          row.original.primary.StudyTag,
+          row.original.reliability?.StudyTag,
+          PrepareContext(
+            ['StudyTag'],
+            row.original.primary.StudyID,
+            row.original.primary.StudyTag ?? '',
+            row.original.reliability?.StudyTag ?? ''
+          )
+        ),
     },
     {
       accessorKey: 'StudyAuthors',
       header: ({ column }) => <DataTableColumnHeader column={column} title="Authors" />,
       cell: ({ row }) =>
-        style_dynamic(row.original.primary.StudyAuthors, row.original.reliability?.StudyAuthors, {
-          Key: ['StudyAuthors'],
-          StudyID: row.original.primary.StudyID,
-          Primary: row.original.primary.StudyAuthors ?? '',
-          Reliability: row.original.reliability?.StudyAuthors ?? '',
-        } satisfies ContextQueryType),
+        style_dynamic(
+          row.original.primary.StudyAuthors,
+          row.original.reliability?.StudyAuthors,
+          PrepareContext(
+            ['StudyAuthors'],
+            row.original.primary.StudyID,
+            row.original.primary.StudyAuthors ?? '',
+            row.original.reliability?.StudyAuthors ?? ''
+          )
+        ),
     },
     {
       accessorKey: 'StudyTitle',
       header: ({ column }) => <DataTableColumnHeader column={column} title="Title" />,
       cell: ({ row }) =>
-        style_dynamic(row.original.primary.StudyTitle, row.original.reliability?.StudyTitle, {
-          Key: ['StudyTitle'],
-          StudyID: row.original.primary.StudyID,
-          Primary: row.original.primary.StudyTitle ?? '',
-          Reliability: row.original.reliability?.StudyTitle ?? '',
-        } satisfies ContextQueryType),
+        style_dynamic(
+          row.original.primary.StudyTitle,
+          row.original.reliability?.StudyTitle,
+          PrepareContext(
+            ['StudyTitle'],
+            row.original.primary.StudyID,
+            row.original.primary.StudyTitle ?? '',
+            row.original.reliability?.StudyTitle ?? ''
+          )
+        ),
     },
     {
       accessorKey: 'StudyJournal',
       header: ({ column }) => <DataTableColumnHeader column={column} title="Journal" />,
       cell: ({ row }) =>
-        style_dynamic(row.original.primary.StudyJournal, row.original.reliability?.StudyJournal, {
-          Key: ['StudyJournal'],
-          StudyID: row.original.primary.StudyID,
-          Primary: row.original.primary.StudyJournal ?? '',
-          Reliability: row.original.reliability?.StudyJournal ?? '',
-        } satisfies ContextQueryType),
+        style_dynamic(
+          row.original.primary.StudyJournal,
+          row.original.reliability?.StudyJournal,
+          PrepareContext(
+            ['StudyJournal'],
+            row.original.primary.StudyID,
+            row.original.primary.StudyJournal ?? '',
+            row.original.reliability?.StudyJournal ?? ''
+          )
+        ),
     },
     {
       accessorKey: 'StudyYear',
       header: ({ column }) => <DataTableColumnHeader column={column} title="Year" />,
       cell: ({ row }) =>
-        style_dynamic(row.original.primary.StudyYear, row.original.reliability?.StudyYear, {
-          Key: ['StudyYear'],
-          StudyID: row.original.primary.StudyID,
-          Primary: row.original.primary.StudyYear?.toString() ?? '',
-          Reliability: row.original.reliability?.StudyYear?.toString() ?? '',
-        } satisfies ContextQueryType),
+        style_dynamic(
+          row.original.primary.StudyYear,
+          row.original.reliability?.StudyYear,
+          PrepareContext(
+            ['StudyYear'],
+            row.original.primary.StudyID,
+            row.original.primary.StudyYear?.toString() ?? '',
+            row.original.reliability?.StudyYear?.toString() ?? ''
+          )
+        ),
     },
     ...empirical_cols_1,
     ...empirical_cols_2,
