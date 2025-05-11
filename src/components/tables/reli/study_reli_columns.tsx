@@ -24,18 +24,24 @@ const GetResponses = (
   QuestionID: string
 ) => {
   const PrimaryResponse = QuestionsPrimary.find((q) => q.QuestionID === QuestionID)?.Response;
-
   const ReliabilityResponse = QuestionsReliability.find((q) => q.QuestionID === QuestionID)?.Response;
 
   return { PrimaryResponse, ReliabilityResponse };
 };
 
-const PrepareContext = (Key: string[], StudyID: string, Primary?: string, Reliability?: string) => {
+const PrepareContext = (
+  Key: string[],
+  StudyID: string,
+  Primary?: string,
+  Reliability?: string,
+  QuestionText?: string
+) => {
   return {
     Key,
     StudyID,
     Primary,
     Reliability,
+    QuestionText,
   } satisfies ContextQueryType;
 };
 
@@ -58,7 +64,8 @@ const empirical_cols_1 = InternalValidityQuestionDefault.Questions.map((question
         ['InternalValidity', question.QuestionID],
         row.original.primary.StudyID,
         PrimaryResponse,
-        ReliabilityResponse
+        ReliabilityResponse,
+        question_lookup?.QuestionStem
       );
 
       return style_dynamic(PrimaryResponse, ReliabilityResponse, ctx);
@@ -89,7 +96,8 @@ const empirical_cols_2 = ExternalValidityQuestionDefault.Questions.map((question
         ['ExternalValidity', question.QuestionID],
         row.original.primary.StudyID,
         PrimaryResponse,
-        ReliabilityResponse
+        ReliabilityResponse,
+        question_lookup?.QuestionStem
       );
 
       return style_dynamic(PrimaryResponse, ReliabilityResponse, ctx);
@@ -120,7 +128,8 @@ const empirical_cols_3 = ReportingQuestionDefault.Questions.map((question) => {
         ['Reporting', question.QuestionID],
         row.original.primary.StudyID,
         PrimaryResponse,
-        ReliabilityResponse
+        ReliabilityResponse,
+        question_lookup?.QuestionStem
       );
 
       return style_dynamic(PrimaryResponse, ReliabilityResponse, ctx);
@@ -151,7 +160,8 @@ const empirical_cols_4 = OutcomesQuestionDefault.Questions.map((question) => {
         ['Outcomes', question.QuestionID],
         row.original.primary.StudyID,
         PrimaryResponse,
-        ReliabilityResponse
+        ReliabilityResponse,
+        question_lookup?.QuestionStem
       );
 
       return style_dynamic(PrimaryResponse, ReliabilityResponse, ctx);
@@ -226,7 +236,8 @@ export function BuildColumns(): ColumnDef<StudyObjectPair>[] {
             ['StudyTag'],
             row.original.primary.StudyID,
             row.original.primary.StudyTag ?? '',
-            row.original.reliability?.StudyTag ?? ''
+            row.original.reliability?.StudyTag ?? '',
+            'What is the preferred tag for this particular study/demonstration?'
           )
         ),
     },
@@ -241,7 +252,8 @@ export function BuildColumns(): ColumnDef<StudyObjectPair>[] {
             ['StudyAuthors'],
             row.original.primary.StudyID,
             row.original.primary.StudyAuthors ?? '',
-            row.original.reliability?.StudyAuthors ?? ''
+            row.original.reliability?.StudyAuthors ?? '',
+            'Who are the authors of this particular study/demonstration?'
           )
         ),
     },
@@ -256,7 +268,8 @@ export function BuildColumns(): ColumnDef<StudyObjectPair>[] {
             ['StudyTitle'],
             row.original.primary.StudyID,
             row.original.primary.StudyTitle ?? '',
-            row.original.reliability?.StudyTitle ?? ''
+            row.original.reliability?.StudyTitle ?? '',
+            'What is the title of this particular study/demonstration?'
           )
         ),
     },
@@ -271,7 +284,8 @@ export function BuildColumns(): ColumnDef<StudyObjectPair>[] {
             ['StudyJournal'],
             row.original.primary.StudyID,
             row.original.primary.StudyJournal ?? '',
-            row.original.reliability?.StudyJournal ?? ''
+            row.original.reliability?.StudyJournal ?? '',
+            'What is the journal of this particular study/demonstration?'
           )
         ),
     },
@@ -286,7 +300,8 @@ export function BuildColumns(): ColumnDef<StudyObjectPair>[] {
             ['StudyYear'],
             row.original.primary.StudyID,
             row.original.primary.StudyYear?.toString() ?? '',
-            row.original.reliability?.StudyYear?.toString() ?? ''
+            row.original.reliability?.StudyYear?.toString() ?? '',
+            'What is the year of this particular study/demonstration?'
           )
         ),
     },

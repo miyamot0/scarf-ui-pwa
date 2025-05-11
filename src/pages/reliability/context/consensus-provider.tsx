@@ -6,6 +6,7 @@ export type ContextQueryType = {
   Primary?: string;
   Reliability?: string;
   Key: string[];
+  QuestionText?: string;
 };
 
 const DEFAULT_CONTEXT: ReliabilityState = {

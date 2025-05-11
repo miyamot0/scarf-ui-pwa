@@ -137,7 +137,7 @@ export function ConsensusDialog() {
           </DialogHeader>
 
           <div className="flex flex-col gap-4">
-            <p>...</p>
+            <p>{context.state?.QuestionText}</p>
 
             <div className="grid grid-cols-4 items-center">
               <div className="col-span-1">Primary: </div>
