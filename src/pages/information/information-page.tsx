@@ -43,10 +43,10 @@ export function InformationPage() {
           </CardHeader>
           <CardContent className="flex flex-col md:flex-row gap-4">
             <div className="flex flex-col min-w-[300px] gap-4">
-              {ExpandedDocumentationObjects.map((doc) => (
+              {ExpandedDocumentationObjects.map((doc, index) => (
                 <Button
                   variant={'ghost'}
-                  className={cn('', {
+                  className={cn('text-left items-start justify-start', {
                     'underline bg-accent border': currentEntry.matter.index === doc.matter.index,
                   })}
                   key={doc.matter.index}
@@ -55,6 +55,7 @@ export function InformationPage() {
                     setCurrentEntry(doc);
                   }}
                 >
+                  {`${index + 1}. `}
                   {doc.matter.title}
                 </Button>
               ))}
