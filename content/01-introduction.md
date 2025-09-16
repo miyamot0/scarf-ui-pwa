@@ -1,5 +1,5 @@
 ---
-title: Planning a SCARF-UI Review
+title: Planning to Use the SCARF-UI
 date: 09/26/2024
 author: 'Shawn Gilroy'
 index: 1
@@ -7,9 +7,9 @@ index: 1
 
 ## Planning to Use the SCARF-UI
 
-The SCARF-UI is a web-based wrapper around the core methods and procedures emphasized in the original [SCARF](https://ebip.vkcsites.org/scarfv2/). Like the original SCARF, there are recommended practices and procedures to follow prior to importing and codifying studies.
+The SCARF-UI is essentially a web-based wrapper around the core methods and procedures emphasized in the original [SCARF](https://ebip.vkcsites.org/scarfv2/). In this sense, the SCARF and SCARF-UI are largely identical apart from how data is organized and visualized. The SCARF-UI is designed to be a more user-friendly and accessible version of the original SCARF, which was primarily a spreadsheet-based tool.
 
-A brief, general outline of the steps reflected in the web-app are described below.
+Like the original SCARF, there are recommended practices and procedures to follow prior to importing/coding studies. A brief, general outline of the steps reflected in the web-app are described below.
 
 ### Establishing the Core Review Protocol
 
